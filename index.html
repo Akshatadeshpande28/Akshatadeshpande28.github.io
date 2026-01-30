@@ -15,55 +15,45 @@
         header {
             background-color: #2e7d32;
             color: white;
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         header img {
-            width: 160px;
+            width: 150px;
             border-radius: 50%;
-            border: 5px solid white;
+            border: 4px solid white;
         }
 
-        header h1 {
-            margin: 15px 0 5px;
-        }
+        h1 { margin: 10px 0; }
 
-        header p {
-            margin: 5px 0;
-        }
-
-        header a {
-            color: white;
+        .btn {
+            display: inline-block;
+            padding: 10px 16px;
+            margin-top: 10px;
+            background-color: white;
+            color: #2e7d32;
             text-decoration: none;
-            margin: 0 10px;
+            border-radius: 6px;
             font-weight: bold;
         }
 
         section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 25px auto;
+            padding: 25px;
+            width: 85%;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
-        h2 {
-            color: #2e7d32;
-        }
+        h2 { color: #2e7d32; }
 
-        .project {
-            margin-bottom: 25px;
-        }
-
-        ul {
-            margin-top: 8px;
-        }
+        .project { margin-bottom: 25px; }
 
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: #2e7d32;
             color: white;
             margin-top: 30px;
@@ -74,53 +64,64 @@
 <body>
 
 <header>
-    <img src="profile.jpg" alt="Akshata Photo">
+    <img src="profile.jpg" alt="Profile Photo">
     <h1>Akshata Deshpande</h1>
-    <p>Data Analyst | Python | SQL | Power BI</p>
-    <p>
-        <a href="https://github.com/Akshatadeshpande28" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/akshatadeshpande28/" target="_blank">LinkedIn</a>
-    </p>
+    <p>Data Analyst | SQL | Python | Power BI</p>
+
+    <!-- Resume Download -->
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
 </header>
 
 <section>
     <h2>About Me</h2>
-    <p>
-        I am a data analyst passionate about transforming raw data into actionable business insights. 
-        Skilled in SQL, Python, and Power BI, I focus on solving real-world problems using analytics, 
-        visualization, and data-driven decision making.
-    </p>
+    <p>Data Analyst skilled in SQL, Python, and Power BI with experience in customer risk analysis, KPI tracking, and performance dashboards. Passionate about turning raw data into actionable business insights.</p>
 </section>
 
 <section>
     <h2>Projects</h2>
 
     <div class="project">
-        <h3>Customer Churn Analysis</h3>
+        <h3>🔁 Customer Churn Analysis – Customer Risk Identification</h3>
+        <p>Analyzed telecom customer data to identify churn drivers and high-risk customer segments.</p>
         <ul>
-            <li>Analyzed customer churn patterns using Python and SQL</li>
-            <li>Built interactive Power BI dashboard to identify high-risk customers</li>
-            <li>Generated retention insights to reduce customer attrition</li>
+            <li>Analyzed ~7,000 customer records using Python and SQL concepts</li>
+            <li>Performed churn analysis by contract type, tenure, payment method, and services</li>
+            <li>Built interactive Power BI dashboard to track churn trends and revenue at risk</li>
+            <li>Generated retention-focused insights supporting customer risk management</li>
         </ul>
-        <p><a href="https://github.com/Akshatadeshpande28/data-analytics-portfolio" target="_blank">View Project</a></p>
+        <a href="https://github.com/Akshatadeshpande28/data-analytics-portfolio" class="btn" target="_blank">View Project</a>
     </div>
 
     <div class="project">
-        <h3>Retail Sales Performance Analysis (Maven Analytics)</h3>
+        <h3>📈 Maven Analytics – Business Performance Dashboard</h3>
+        <p>Executive dashboard monitoring transactions, profit, returns, and brand performance.</p>
         <ul>
-            <li>Analyzed sales, profit, and returns across regions</li>
-            <li>Identified high-value markets and top-performing brands</li>
-            <li>Created dashboards for decision-making and profitability tracking</li>
+            <li>Developed KPI dashboard tracking transactions, profit, and return rates</li>
+            <li>Analyzed regional performance to identify high-value markets</li>
+            <li>Evaluated brand-level profitability and contribution</li>
+            <li>Delivered structured insights for business performance monitoring</li>
         </ul>
+        <a href="https://github.com/Akshatadeshpande28/data-analytics-portfolio" class="btn" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+        <h3>🎬 Netflix Content Data Analysis</h3>
+        <p>Explored Netflix content trends, genres, release patterns, and global distribution.</p>
+        <ul>
+            <li>Analyzed movies vs TV shows distribution across years</li>
+            <li>Identified popular genres and major content-producing countries</li>
+            <li>Studied content growth trends over time</li>
+            <li>Built visual insights to understand content patterns</li>
+        </ul>
+        <a href="https://github.com/Akshatadeshpande28/data-analytics-portfolio" class="btn" target="_blank">View Project</a>
     </div>
 
 </section>
 
 <section>
-    <h2>Skills</h2>
-    <p><b>Languages:</b> Python, SQL</p>
-    <p><b>Visualization:</b> Power BI</p>
-    <p><b>Concepts:</b> Data Cleaning, EDA, KPI Analysis, Business Insights</p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:akshata.jd03@gmail.com">akshata.jd03@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/akshatadeshpande28/" target="_blank">linkedin.com/in/akshatadeshpande28</a></p>
 </section>
 
 <footer>
