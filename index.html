@@ -6,180 +6,155 @@
 <title>Akshata Deshpande | Data Analyst</title>
 
 <style>
+html { scroll-behavior:smooth; }
+
 body {
   margin:0;
-  font-family: Arial, sans-serif;
-  background:#f4f6f9;
-  color:#333;
-  transition:0.3s;
-}
-
-header {
-  background:linear-gradient(135deg,#1f4e79,#163c5a);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:#0f172a;
   color:white;
-  text-align:center;
-  padding:60px 20px;
-  position:relative;
 }
 
+/* NAVBAR */
+nav {
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(15,23,42,0.9);
+  padding:12px 0;
+  text-align:center;
+  z-index:1000;
+}
+nav a {
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* HERO */
+header {
+  text-align:center;
+  padding:120px 20px 80px;
+  background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
+}
 header img {
-  width:170px;
+  width:160px;
   border-radius:50%;
   border:5px solid white;
 }
-
-h1 { margin:15px 0 5px; }
-
-.role {
-  font-size:18px;
-  height:25px;
-}
+.role { font-size:18px; height:25px; margin-top:10px; }
 
 .resume-btn {
   display:inline-block;
   margin-top:15px;
   padding:12px 20px;
-  background:#ffcc00;
+  background:#facc15;
   color:black;
   font-weight:bold;
   border-radius:6px;
   text-decoration:none;
 }
 
-.toggle {
-  position:absolute;
-  top:15px;
-  right:15px;
-  background:white;
-  padding:6px 12px;
-  border-radius:20px;
-  cursor:pointer;
-}
-
+/* SECTIONS */
 section {
   max-width:1100px;
-  margin:50px auto;
+  margin:80px auto;
   padding:0 20px;
 }
+h2 { text-align:center; margin-bottom:40px; }
 
-h2 { text-align:center; margin-bottom:30px; }
+/* GLASS CARDS */
+.card, .skill {
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
 
+/* SKILLS */
 .skills {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
 }
+.bar { background:#334155; height:8px; border-radius:5px; margin-top:6px;}
+.bar span { display:block; height:8px; background:#38bdf8; border-radius:5px;}
 
-.skill {
-  background:white;
-  padding:15px;
-  border-radius:8px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.bar {
-  background:#ddd;
-  height:8px;
-  border-radius:5px;
-  margin-top:6px;
-}
-
-.bar span {
-  display:block;
-  height:8px;
-  background:#1f4e79;
-  border-radius:5px;
-}
-
-.cards {
+/* PROJECTS */
+.projects {
   display:flex;
   gap:20px;
   flex-wrap:wrap;
   justify-content:center;
 }
+.card:hover { transform:translateY(-6px); transition:0.3s; }
+.card a { color:#38bdf8; font-weight:bold; }
 
-.card {
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
-  flex:1 1 300px;
-  transition:0.3s;
-}
-
-.card:hover { transform:translateY(-5px); }
-
-.card a {
-  display:inline-block;
-  margin-top:10px;
-  color:#1f4e79;
-  font-weight:bold;
-}
-
+/* DASHBOARDS */
 .dashboards {
   display:flex;
   gap:20px;
   justify-content:center;
   flex-wrap:wrap;
 }
-
 .dashboards img {
   width:100%;
   max-width:320px;
-  border-radius:8px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.2);
+  border-radius:10px;
 }
 
+/* CONTACT */
 form input, form textarea {
   width:100%;
   padding:10px;
   margin:10px 0;
-  border-radius:5px;
-  border:1px solid #ccc;
+  border-radius:6px;
+  border:none;
 }
-
 form button {
   padding:12px;
-  background:#1f4e79;
-  color:white;
+  background:#38bdf8;
+  color:black;
   border:none;
   border-radius:6px;
   cursor:pointer;
 }
 
+/* FOOTER */
 footer {
   text-align:center;
-  padding:20px;
-  background:#1f4e79;
-  color:white;
+  padding:25px;
+  background:#1e293b;
 }
-
-.dark {
-  background:#121212;
-  color:white;
-}
-.dark .card, .dark .skill { background:#1e1e1e; color:white; }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <header>
-  <div class="toggle" onclick="toggleMode()">🌙 Mode</div>
   <img src="profile.jpg" alt="Akshata">
   <h1>Akshata Deshpande</h1>
   <div class="role" id="role"></div>
   <a href="Akshata_Deshpande_Resume.pdf" download class="resume-btn">⬇ Download Resume</a>
 </header>
 
-<section>
+<section id="about">
 <h2>About Me</h2>
-<p style="text-align:center;">
-Data Analyst passionate about transforming raw data into actionable insights using Python, SQL, and Business Intelligence tools.
-</p>
+<div class="card">
+Data Analyst passionate about transforming raw data into actionable business insights using Python, SQL, and Business Intelligence tools.
+</div>
 </section>
 
-<section>
+<section id="skills">
 <h2>Skills</h2>
 <div class="skills">
   <div class="skill">🐍 Python<div class="bar"><span style="width:90%"></span></div></div>
@@ -189,31 +164,29 @@ Data Analyst passionate about transforming raw data into actionable insights usi
 </div>
 </section>
 
-<section>
+<section id="projects">
 <h2>Projects</h2>
-<div class="cards">
+<div class="projects">
   <div class="card">
     <h3>Customer Churn Analysis</h3>
-    <p>Identified high-churn segments (30–35%) and revenue-at-risk patterns using Python & Power BI.</p>
+    <p>Identified high-churn segments (30–35%) and revenue-at-risk patterns.</p>
     <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
   </div>
-
   <div class="card">
     <h3>Maven Analytics Dashboard</h3>
     <p>Designed KPI dashboards and found 25%+ high-profit markets.</p>
     <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
   </div>
-
   <div class="card">
     <h3>Netflix Data Analysis</h3>
-    <p>Analyzed 6,000+ titles and discovered post-2015 growth trends.</p>
+    <p>Analyzed 6,000+ titles and identified growth trends.</p>
     <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
   </div>
 </div>
 </section>
 
 <section>
-<h2>Project Dashboards</h2>
+<h2>Dashboards</h2>
 <div class="dashboards">
   <img src="churn.png">
   <img src="maven.png">
@@ -221,8 +194,8 @@ Data Analyst passionate about transforming raw data into actionable insights usi
 </div>
 </section>
 
-<section>
-<h2>Contact Me</h2>
+<section id="contact">
+<h2>Contact</h2>
 <form action="https://formspree.io/f/mgozqazo" method="POST">
   <input type="text" name="name" placeholder="Your Name" required>
   <input type="email" name="email" placeholder="Your Email" required>
@@ -234,11 +207,9 @@ Data Analyst passionate about transforming raw data into actionable insights usi
 <footer>© 2026 Akshata Deshpande | Data Analyst Portfolio</footer>
 
 <script>
-const roles = ["Data Analyst","Python Developer","SQL Specialist","BI Enthusiast"];
+const roles=["Data Analyst","Python Developer","SQL Specialist","BI Enthusiast"];
 let i=0;
 setInterval(()=>{ document.getElementById("role").textContent=roles[i]; i=(i+1)%roles.length;},2000);
-
-function toggleMode(){ document.body.classList.toggle("dark"); }
 </script>
 
 </body>
