@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Akshata Deshpande | Data Analyst Portfolio</title>
+    <title>Akshata Deshpande | Data Analyst</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
@@ -10,13 +10,19 @@
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #f4f6f8;
             color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background: #121212;
+            color: white;
         }
 
         header {
             background: linear-gradient(120deg, #1e3c72, #2a5298);
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
 
         header img {
@@ -24,10 +30,6 @@
             border-radius: 50%;
             border: 4px solid white;
         }
-
-        header h1 { margin: 10px 0; font-size: 32px; }
-
-        header p { font-size: 18px; opacity: 0.9; }
 
         .btn {
             display: inline-block;
@@ -51,7 +53,7 @@
             color: #1e3c72;
         }
 
-        .skills, .projects {
+        .skills, .projects, .screenshots {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
@@ -70,29 +72,49 @@
             transform: translateY(-5px);
         }
 
+        .dark-mode .card {
+            background: #1e1e1e;
+        }
+
+        .screenshots img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
             background: #1e3c72;
             color: white;
-            margin-top: 40px;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            background: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
 
+<div class="toggle" onclick="toggleMode()">🌙 Dark Mode</div>
+
 <header>
     <img src="profile.jpg" alt="Profile Photo">
     <h1>Akshata Deshpande</h1>
-    <p>Data Analyst | SQL | Python | Power BI</p>
+    <p id="typing"></p>
     <a href="Akshata_Deshpande_Resume.pdf" class="btn" download>Download Resume</a>
 </header>
 
 <section>
     <h2>About Me</h2>
     <p style="text-align:center; max-width:700px; margin:auto;">
-        Detail-oriented Data Analyst skilled in SQL, Python, and Power BI. I transform raw data into meaningful insights through dashboards, trend analysis, and customer risk modeling.
+        Detail-oriented Data Analyst skilled in SQL, Python, and Power BI. I transform raw data into meaningful business insights using analytics and dashboards.
     </p>
 </section>
 
@@ -109,31 +131,63 @@
 <section>
     <h2>Projects</h2>
     <div class="projects">
-
         <div class="card">
             <h3>Customer Churn Analysis</h3>
-            <p>Identified high-churn segments (30–35%) and built Power BI dashboards to track revenue-at-risk patterns.</p>
-            <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub</a>
+            <p>Identified high-churn segments (30–35%) and revenue-at-risk patterns.</p>
+            <a href="https://github.com/Akshatadeshpande28" target="_blank">GitHub</a>
         </div>
-
         <div class="card">
             <h3>Maven Analytics Dashboard</h3>
-            <p>Designed KPI dashboards and identified markets with 25%+ higher profit margins.</p>
-            <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub</a>
+            <p>Designed KPI dashboards and found 25%+ higher profit markets.</p>
+            <a href="https://github.com/Akshatadeshpande28" target="_blank">GitHub</a>
         </div>
-
         <div class="card">
             <h3>Netflix Data Analysis</h3>
-            <p>Analyzed 6,000+ titles to uncover genre trends and 60%+ post-2015 content growth.</p>
-            <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub</a>
+            <p>Analyzed 6,000+ titles and found 60%+ post-2015 content growth.</p>
+            <a href="https://github.com/Akshatadeshpande28" target="_blank">GitHub</a>
         </div>
-
     </div>
+</section>
+
+<section>
+    <h2>Project Dashboards</h2>
+    <div class="screenshots">
+        <img src="churn_dashboard.png" alt="Churn Dashboard">
+        <img src="maven_dashboard.png" alt="Maven Dashboard">
+        <img src="netflix_dashboard.png" alt="Netflix Dashboard">
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <form action="mailto:akshata.jd03@gmail.com" method="post" enctype="text/plain">
+        <input type="text" placeholder="Your Name" required style="width:100%; padding:10px; margin:5px 0;">
+        <input type="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:5px 0;">
+        <textarea placeholder="Your Message" rows="4" style="width:100%; padding:10px;"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
 </section>
 
 <footer>
     © 2026 Akshata Deshpande | Data Analyst Portfolio
 </footer>
+
+<script>
+    const text = "Data Analyst | SQL | Python | Power BI";
+    let i = 0;
+    function typeEffect() {
+        if (i < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeEffect, 50);
+        }
+    }
+    typeEffect();
+
+    function toggleMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
 
 </body>
 </html>
