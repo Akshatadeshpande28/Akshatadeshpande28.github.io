@@ -6,57 +6,76 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6f8;
             color: #333;
         }
 
         header {
-            background-color: #2e7d32;
+            background: linear-gradient(120deg, #1e3c72, #2a5298);
             color: white;
-            padding: 40px 20px;
             text-align: center;
+            padding: 60px 20px;
         }
 
         header img {
-            width: 150px;
+            width: 140px;
             border-radius: 50%;
             border: 4px solid white;
         }
 
-        h1 { margin: 10px 0; }
+        header h1 { margin: 10px 0; font-size: 32px; }
+
+        header p { font-size: 18px; opacity: 0.9; }
 
         .btn {
             display: inline-block;
-            padding: 10px 16px;
-            margin-top: 10px;
-            background-color: white;
-            color: #2e7d32;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: white;
+            color: #1e3c72;
+            border-radius: 25px;
             text-decoration: none;
-            border-radius: 6px;
             font-weight: bold;
         }
 
         section {
-            background: white;
-            margin: 25px auto;
-            padding: 25px;
-            width: 85%;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
         }
 
-        h2 { color: #2e7d32; }
+        h2 {
+            text-align: center;
+            color: #1e3c72;
+        }
 
-        .project { margin-bottom: 25px; }
+        .skills, .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
         footer {
             text-align: center;
             padding: 20px;
-            background: #2e7d32;
+            background: #1e3c72;
             color: white;
-            margin-top: 30px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -67,55 +86,49 @@
     <img src="profile.jpg" alt="Profile Photo">
     <h1>Akshata Deshpande</h1>
     <p>Data Analyst | SQL | Python | Power BI</p>
-
-    <!-- Resume Download (UPDATED NAME) -->
     <a href="Akshata_Deshpande_Resume.pdf" class="btn" download>Download Resume</a>
 </header>
 
 <section>
     <h2>About Me</h2>
-    <p>Detail-oriented Data Analyst skilled in SQL, Python, and Power BI with experience in customer risk analysis, KPI tracking, and performance dashboards. Passionate about turning raw data into actionable business insights.</p>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        Detail-oriented Data Analyst skilled in SQL, Python, and Power BI. I transform raw data into meaningful insights through dashboards, trend analysis, and customer risk modeling.
+    </p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="card"><b>SQL</b><br>Joins, Aggregations, Data Validation</div>
+        <div class="card"><b>Python</b><br>Pandas, NumPy, Matplotlib, Seaborn</div>
+        <div class="card"><b>Power BI</b><br>Dashboards, KPI Tracking</div>
+        <div class="card"><b>Analytics</b><br>EDA, Data Cleaning, Trend Analysis</div>
+    </div>
 </section>
 
 <section>
     <h2>Projects</h2>
+    <div class="projects">
 
-    <div class="project">
-        <h3>🔁 Customer Churn Analysis</h3>
-        <ul>
-            <li>Analyzed 7,000+ customer records and identified high-churn segments (30–35%)</li>
-            <li>Identified revenue-at-risk patterns linked to contract type and monthly charges</li>
-            <li>Built Power BI dashboard reducing manual reporting time by 40%</li>
-        </ul>
-        <a href="https://github.com/Akshatadeshpande28" class="btn" target="_blank">View Project</a>
+        <div class="card">
+            <h3>Customer Churn Analysis</h3>
+            <p>Identified high-churn segments (30–35%) and built Power BI dashboards to track revenue-at-risk patterns.</p>
+            <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="card">
+            <h3>Maven Analytics Dashboard</h3>
+            <p>Designed KPI dashboards and identified markets with 25%+ higher profit margins.</p>
+            <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="card">
+            <h3>Netflix Data Analysis</h3>
+            <p>Analyzed 6,000+ titles to uncover genre trends and 60%+ post-2015 content growth.</p>
+            <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub</a>
+        </div>
+
     </div>
-
-    <div class="project">
-        <h3>📈 Maven Analytics Dashboard</h3>
-        <ul>
-            <li>Identified markets contributing 25%+ higher profit margins</li>
-            <li>Designed KPI dashboard improving reporting visibility by 50%</li>
-            <li>Reduced Excel reporting effort by 35%</li>
-        </ul>
-        <a href="https://github.com/Akshatadeshpande28" class="btn" target="_blank">View Project</a>
-    </div>
-
-    <div class="project">
-        <h3>🎬 Netflix Data Analysis</h3>
-        <ul>
-            <li>Analyzed 6,000+ titles to identify genre and release trends</li>
-            <li>Found post-2015 content growth increased by 60%+</li>
-            <li>Created visual insights improving exploratory analysis efficiency</li>
-        </ul>
-        <a href="https://github.com/Akshatadeshpande28" class="btn" target="_blank">View Project</a>
-    </div>
-
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:akshata.jd03@gmail.com">akshata.jd03@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/akshatadeshpande28/" target="_blank">linkedin.com/in/akshatadeshpande28</a></p>
 </section>
 
 <footer>
