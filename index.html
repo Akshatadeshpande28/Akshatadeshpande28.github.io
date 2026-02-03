@@ -11,147 +11,211 @@ body{
   font-family:'Segoe UI',sans-serif;
   background:#0f172a;
   color:white;
-  transition:0.4s;
 }
-.light { background:#f4f6f9; color:#333; }
+
+/* NAV */
 nav{
   position:fixed;
   width:100%;
   top:0;
-  background:rgba(0,0,0,0.7);
+  background:#111827;
+  padding:12px 0;
   text-align:center;
-  padding:10px;
   z-index:1000;
 }
-nav a{color:white;margin:0 15px;text-decoration:none;}
+nav a{
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* HERO */
 header{
   padding:120px 20px 80px;
   text-align:center;
   background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
 }
-header img{width:150px;border-radius:50%;border:4px solid white;}
-.resume-btn{background:#facc15;color:black;padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:bold;}
-section{max-width:1100px;margin:80px auto;padding:0 20px;}
+header img{
+  width:150px;
+  border-radius:50%;
+  border:4px solid white;
+}
+.resume-btn{
+  background:#facc15;
+  color:black;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+  margin-top:10px;
+}
+.social{
+  margin-top:10px;
+}
+.social a{
+  margin:0 10px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* SECTIONS */
+section{
+  max-width:1000px;
+  margin:80px auto;
+  padding:0 20px;
+}
 h2{text-align:center;margin-bottom:30px;}
-.card{
-  background:rgba(255,255,255,0.08);
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+.skill{
+  background:#1e293b;
+  padding:15px;
+  border-radius:8px;
+  text-align:center;
+  font-weight:500;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.project{
+  background:#1e293b;
   padding:20px;
   border-radius:10px;
-  margin:15px;
+}
+.project img{
+  width:100%;
+  border-radius:6px;
+  margin-bottom:10px;
+}
+.project a{
+  display:inline-block;
+  margin-top:10px;
+  color:#38bdf8;
+  font-weight:bold;
+}
+
+/* FORM */
+form{
+  max-width:500px;
+  margin:auto;
+}
+form input, form textarea{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:6px;
+  border:none;
+}
+form button{
+  padding:12px;
+  width:100%;
+  background:#38bdf8;
+  border:none;
+  border-radius:6px;
+  font-weight:bold;
   cursor:pointer;
-  transition:0.3s;
 }
-.card:hover{transform:translateY(-5px);}
-.projects{display:flex;flex-wrap:wrap;justify-content:center;}
-.modal{
-  display:none;
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.8);
-  justify-content:center;
-  align-items:center;
-}
-.modal-content{
-  background:white;
-  color:black;
+
+footer{
+  text-align:center;
   padding:25px;
-  width:80%;
-  max-width:600px;
-  border-radius:10px;
+  background:#1e293b;
 }
-.close{float:right;cursor:pointer;font-size:20px;}
-canvas{max-width:500px;margin:auto;display:block;}
-footer{text-align:center;padding:20px;background:#1e293b;}
-.toggle{position:fixed;top:15px;right:20px;background:white;color:black;padding:6px 12px;border-radius:20px;cursor:pointer;}
 </style>
 </head>
 
 <body>
 
-<div class="toggle" onclick="toggleTheme()">🌗 Theme</div>
-
 <nav>
   <a href="#about">About</a>
-  <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <header>
   <img src="profile.jpg">
   <h1>Akshata Deshpande</h1>
-  <p id="role"></p>
+  <p>Data Analyst | SQL | Python | Power BI</p>
+
+  <div class="social">
+    <a href="https://www.linkedin.com/in/akshatadeshpande28" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/Akshatadeshpande28" target="_blank">GitHub</a>
+  </div>
+
   <a href="Akshata_Deshpande_Resume.pdf" download class="resume-btn">Download Resume</a>
 </header>
 
 <section id="about">
 <h2>About Me</h2>
-<div class="card">Data Analyst passionate about transforming raw data into business insights.</div>
+<p style="text-align:center;">
+Detail-oriented Data Analyst skilled in SQL, Python, and BI tools. I turn data into business insights.
+</p>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+  <div class="skill">Python (Pandas, NumPy)</div>
+  <div class="skill">SQL (Joins, Aggregations)</div>
+  <div class="skill">Power BI Dashboards</div>
+  <div class="skill">Tableau</div>
+  <div class="skill">Data Cleaning</div>
+  <div class="skill">EDA & KPI Analysis</div>
+</div>
 </section>
 
 <section id="projects">
 <h2>Projects</h2>
 <div class="projects">
-  <div class="card" onclick="openModal('churn')">Customer Churn Analysis</div>
-  <div class="card" onclick="openModal('maven')">Maven Analytics Dashboard</div>
-  <div class="card" onclick="openModal('netflix')">Netflix Data Analysis</div>
-</div>
-</section>
 
-<!-- MODALS -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">✖</span>
-    <h3 id="modal-title"></h3>
-    <p id="modal-text"></p>
+  <div class="project">
+    <img src="churn.png">
+    <h3>Customer Churn Analysis</h3>
+    <p>Identified 30–35% high-risk customers and revenue-at-risk trends.</p>
+    <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub →</a>
   </div>
-</div>
 
-<section id="skills">
-<h2>Skills Chart</h2>
-<canvas id="skillChart"></canvas>
+  <div class="project">
+    <img src="maven.png">
+    <h3>Maven Analytics Dashboard</h3>
+    <p>KPI dashboards revealed 25%+ higher profit markets.</p>
+    <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub →</a>
+  </div>
+
+  <div class="project">
+    <img src="Netflix.png">
+    <h3>Netflix Data Analysis</h3>
+    <p>Analyzed 6,000+ titles and discovered growth trends.</p>
+    <a href="https://github.com/Akshatadeshpande28" target="_blank">View on GitHub →</a>
+  </div>
+
+</div>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
 <form action="https://formspree.io/f/mgozqazo" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+  <button type="submit">Send Message</button>
 </form>
 </section>
 
 <footer>© 2026 Akshata Deshpande</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-const roles=["Data Analyst","Python Developer","SQL Specialist","BI Enthusiast"];
-let i=0; setInterval(()=>{document.getElementById("role").textContent=roles[i]; i=(i+1)%roles.length;},2000);
-
-function toggleTheme(){ document.body.classList.toggle("light"); }
-
-function openModal(type){
-  const data={
-    churn:["Customer Churn Analysis","Identified 30–35% high-risk customers and revenue-at-risk trends."],
-    maven:["Maven Analytics","KPI dashboards revealed 25% higher profit markets."],
-    netflix:["Netflix Analysis","Found post-2015 content growth and genre trends."]
-  };
-  document.getElementById("modal-title").textContent=data[type][0];
-  document.getElementById("modal-text").textContent=data[type][1];
-  document.getElementById("modal").style.display="flex";
-}
-function closeModal(){ document.getElementById("modal").style.display="none"; }
-
-new Chart(document.getElementById("skillChart"),{
-  type:'bar',
-  data:{
-    labels:['Python','SQL','Power BI','Tableau'],
-    datasets:[{label:'Skill Level',data:[90,85,80,75],backgroundColor:'#38bdf8'}]
-  }
-});
-</script>
 
 </body>
 </html>
