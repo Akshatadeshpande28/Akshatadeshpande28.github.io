@@ -1,204 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Akshata Deshpande | Data Analyst</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Akshata Deshpande | Data Analyst</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-      color: #333;
-    }
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f4f6f9;
+  color:#333;
+  transition:0.3s;
+}
 
-    header {
-      background: #1f4e79;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      position: relative;
-    }
+header {
+  background:linear-gradient(135deg,#1f4e79,#163c5a);
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+  position:relative;
+}
 
-    header img {
-      width: 160px;
-      border-radius: 50%;
-      border: 5px solid white;
-    }
+header img {
+  width:170px;
+  border-radius:50%;
+  border:5px solid white;
+}
 
-    h1 { margin: 15px 0 5px; }
+h1 { margin:15px 0 5px; }
 
-    .resume-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #ffcc00;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-    }
+.role {
+  font-size:18px;
+  height:25px;
+}
 
-    section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+.resume-btn {
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 20px;
+  background:#ffcc00;
+  color:black;
+  font-weight:bold;
+  border-radius:6px;
+  text-decoration:none;
+}
 
-    .cards {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.toggle {
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:white;
+  padding:6px 12px;
+  border-radius:20px;
+  cursor:pointer;
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      flex: 1 1 300px;
-    }
+section {
+  max-width:1100px;
+  margin:50px auto;
+  padding:0 20px;
+}
 
-    .card h3 { margin-top: 0; }
+h2 { text-align:center; margin-bottom:30px; }
 
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #1f4e79;
-      font-weight: bold;
-    }
+.skills {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
 
-    .dashboards img {
-      width: 100%;
-      max-width: 320px;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    }
+.skill {
+  background:white;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
 
-    .dashboards {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+.bar {
+  background:#ddd;
+  height:8px;
+  border-radius:5px;
+  margin-top:6px;
+}
 
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+.bar span {
+  display:block;
+  height:8px;
+  background:#1f4e79;
+  border-radius:5px;
+}
 
-    form button {
-      padding: 12px;
-      background: #1f4e79;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.cards {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1f4e79;
-      color: white;
-      margin-top: 40px;
-    }
+.card {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  flex:1 1 300px;
+  transition:0.3s;
+}
 
-    .toggle {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: white;
-      color: black;
-      border-radius: 20px;
-      padding: 5px 12px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.card:hover { transform:translateY(-5px); }
 
-    .dark {
-      background: #121212;
-      color: white;
-    }
+.card a {
+  display:inline-block;
+  margin-top:10px;
+  color:#1f4e79;
+  font-weight:bold;
+}
 
-    .dark .card {
-      background: #1e1e1e;
-      color: white;
-    }
-  </style>
+.dashboards {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.dashboards img {
+  width:100%;
+  max-width:320px;
+  border-radius:8px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+form input, form textarea {
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+form button {
+  padding:12px;
+  background:#1f4e79;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:#1f4e79;
+  color:white;
+}
+
+.dark {
+  background:#121212;
+  color:white;
+}
+.dark .card, .dark .skill { background:#1e1e1e; color:white; }
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="toggle" onclick="toggleMode()">🌙 Dark Mode</div>
+  <div class="toggle" onclick="toggleMode()">🌙 Mode</div>
   <img src="profile.jpg" alt="Akshata">
   <h1>Akshata Deshpande</h1>
-  <p>Data Analyst | Python | SQL | Power BI</p>
+  <div class="role" id="role"></div>
   <a href="Akshata_Deshpande_Resume.pdf" download class="resume-btn">⬇ Download Resume</a>
 </header>
 
 <section>
-  <h2>About Me</h2>
-  <p>Data analyst passionate about transforming data into meaningful business insights using analytics and visualization tools.</p>
+<h2>About Me</h2>
+<p style="text-align:center;">
+Data Analyst passionate about transforming raw data into actionable insights using Python, SQL, and Business Intelligence tools.
+</p>
 </section>
 
 <section>
-  <h2>Projects</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Customer Churn Analysis</h3>
-      <p>Identified high-churn segments (30–35%) and revenue-at-risk patterns using Python & Power BI.</p>
-      <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
-    </div>
+<h2>Skills</h2>
+<div class="skills">
+  <div class="skill">🐍 Python<div class="bar"><span style="width:90%"></span></div></div>
+  <div class="skill">🧠 SQL<div class="bar"><span style="width:85%"></span></div></div>
+  <div class="skill">📊 Power BI<div class="bar"><span style="width:80%"></span></div></div>
+  <div class="skill">📈 Tableau<div class="bar"><span style="width:75%"></span></div></div>
+</div>
+</section>
 
-    <div class="card">
-      <h3>Maven Analytics Dashboard</h3>
-      <p>Designed KPI dashboards and identified 25%+ high-profit markets using data storytelling.</p>
-      <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
-    </div>
-
-    <div class="card">
-      <h3>Netflix Data Analysis</h3>
-      <p>Analyzed 6,000+ titles and discovered 60%+ growth in post-2015 content.</p>
-      <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
-    </div>
+<section>
+<h2>Projects</h2>
+<div class="cards">
+  <div class="card">
+    <h3>Customer Churn Analysis</h3>
+    <p>Identified high-churn segments (30–35%) and revenue-at-risk patterns using Python & Power BI.</p>
+    <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
   </div>
-</section>
 
-<section>
-  <h2>Project Dashboards</h2>
-  <div class="dashboards">
-    <img src="churn.png" alt="Churn Dashboard">
-    <img src="maven.png" alt="Maven Dashboard">
-    <img src="Netflix.png" alt="Netflix Dashboard">
+  <div class="card">
+    <h3>Maven Analytics Dashboard</h3>
+    <p>Designed KPI dashboards and found 25%+ high-profit markets.</p>
+    <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
   </div>
+
+  <div class="card">
+    <h3>Netflix Data Analysis</h3>
+    <p>Analyzed 6,000+ titles and discovered post-2015 growth trends.</p>
+    <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
+  </div>
+</div>
 </section>
 
 <section>
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/mgozqazo" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+<h2>Project Dashboards</h2>
+<div class="dashboards">
+  <img src="churn.png">
+  <img src="maven.png">
+  <img src="Netflix.png">
+</div>
 </section>
 
-<footer>
-  © 2026 Akshata Deshpande | Data Analyst Portfolio
-</footer>
+<section>
+<h2>Contact Me</h2>
+<form action="https://formspree.io/f/mgozqazo" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+  <button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>© 2026 Akshata Deshpande | Data Analyst Portfolio</footer>
 
 <script>
-function toggleMode() {
-  document.body.classList.toggle("dark");
-}
+const roles = ["Data Analyst","Python Developer","SQL Specialist","BI Enthusiast"];
+let i=0;
+setInterval(()=>{ document.getElementById("role").textContent=roles[i]; i=(i+1)%roles.length;},2000);
+
+function toggleMode(){ document.body.classList.toggle("dark"); }
 </script>
 
 </body>
