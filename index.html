@@ -1,192 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Akshata Deshpande | Data Analyst</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akshata Deshpande | Data Analyst</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f4f6f8;
-            color: #333;
-            transition: background 0.3s, color 0.3s;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
 
-        .dark-mode {
-            background: #121212;
-            color: white;
-        }
+    header {
+      background: #1f4e79;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
 
-        header {
-            background: linear-gradient(120deg, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
+    header img {
+      width: 160px;
+      border-radius: 50%;
+      border: 5px solid white;
+    }
 
-        header img {
-            width: 140px;
-            border-radius: 50%;
-            border: 4px solid white;
-        }
+    h1 { margin: 15px 0 5px; }
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
-            background: white;
-            color: #1e3c72;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #ffcc00;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
 
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-        h2 {
-            text-align: center;
-            color: #1e3c72;
-        }
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-        .skills, .projects, .screenshots {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+    }
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease;
-        }
+    .card h3 { margin-top: 0; }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1f4e79;
+      font-weight: bold;
+    }
 
-        .dark-mode .card {
-            background: #1e1e1e;
-        }
+    .dashboards img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
 
-        .screenshots img {
-            width: 100%;
-            border-radius: 8px;
-        }
+    .dashboards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e3c72;
-            color: white;
-        }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-        .toggle {
-            position: fixed;
-            top: 15px;
-            right: 20px;
-            background: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-    </style>
+    form button {
+      padding: 12px;
+      background: #1f4e79;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f4e79;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: white;
+      color: black;
+      border-radius: 20px;
+      padding: 5px 12px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .dark {
+      background: #121212;
+      color: white;
+    }
+
+    .dark .card {
+      background: #1e1e1e;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="toggle" onclick="toggleMode()">🌙 Dark Mode</div>
-
 <header>
-    <img src="profile.jpg" alt="Profile Photo">
-    <h1>Akshata Deshpande</h1>
-    <p id="typing"></p>
-    <a href="Akshata_Deshpande_Resume.pdf" class="btn" download>Download Resume</a>
+  <div class="toggle" onclick="toggleMode()">🌙 Dark Mode</div>
+  <img src="profile.jpg" alt="Akshata">
+  <h1>Akshata Deshpande</h1>
+  <p>Data Analyst | Python | SQL | Power BI</p>
+  <a href="resume.pdf" download class="resume-btn">⬇ Download Resume</a>
 </header>
 
 <section>
-    <h2>About Me</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-        Detail-oriented Data Analyst skilled in SQL, Python, and Power BI. I transform raw data into meaningful business insights using analytics and dashboards.
-    </p>
+  <h2>About Me</h2>
+  <p>Data analyst passionate about transforming data into meaningful business insights using analytics and visualization tools.</p>
 </section>
 
 <section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="card"><b>SQL</b><br>Joins, Aggregations, Data Validation</div>
-        <div class="card"><b>Python</b><br>Pandas, NumPy, Matplotlib, Seaborn</div>
-        <div class="card"><b>Power BI</b><br>Dashboards, KPI Tracking</div>
-        <div class="card"><b>Analytics</b><br>EDA, Data Cleaning, Trend Analysis</div>
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Customer Churn Analysis</h3>
+      <p>Identified high-churn segments (30–35%) and revenue-at-risk patterns using Python & Power BI.</p>
+      <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
     </div>
-</section>
 
-<section>
-    <h2>Projects</h2>
-    <div class="projects">
-        <div class="card">
-            <h3>Customer Churn Analysis</h3>
-            <p>Identified high-churn segments (30–35%) and revenue-at-risk patterns.</p>
-            <a href="https://github.com/Akshatadeshpande28" target="_blank">GitHub</a>
-        </div>
-        <div class="card">
-            <h3>Maven Analytics Dashboard</h3>
-            <p>Designed KPI dashboards and found 25%+ higher profit markets.</p>
-            <a href="https://github.com/Akshatadeshpande28" target="_blank">GitHub</a>
-        </div>
-        <div class="card">
-            <h3>Netflix Data Analysis</h3>
-            <p>Analyzed 6,000+ titles and found 60%+ post-2015 content growth.</p>
-            <a href="https://github.com/Akshatadeshpande28" target="_blank">GitHub</a>
-        </div>
+    <div class="card">
+      <h3>Maven Analytics Dashboard</h3>
+      <p>Designed KPI dashboards and identified 25%+ high-profit markets using data storytelling.</p>
+      <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
     </div>
-</section>
 
-<section>
-    <h2>Project Dashboards</h2>
-    <div class="screenshots">
-        <img src="churn_dashboard.png" alt="Churn Dashboard">
-        <img src="maven_dashboard.png" alt="Maven Dashboard">
-        <img src="netflix_dashboard.png" alt="Netflix Dashboard">
+    <div class="card">
+      <h3>Netflix Data Analysis</h3>
+      <p>Analyzed 6,000+ titles and discovered 60%+ growth in post-2015 content.</p>
+      <a href="https://github.com/Akshatadeshpande28">GitHub →</a>
     </div>
+  </div>
 </section>
 
 <section>
-    <h2>Contact</h2>
-    <form action="mailto:akshata.jd03@gmail.com" method="post" enctype="text/plain">
-        <input type="text" placeholder="Your Name" required style="width:100%; padding:10px; margin:5px 0;">
-        <input type="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:5px 0;">
-        <textarea placeholder="Your Message" rows="4" style="width:100%; padding:10px;"></textarea>
-        <button type="submit" class="btn">Send Message</button>
-    </form>
+  <h2>Project Dashboards</h2>
+  <div class="dashboards">
+    <img src="churn_dashboard.png" alt="Churn Dashboard">
+    <img src="maven_dashboard.png" alt="Maven Dashboard">
+    <img src="netflix_dashboard.png" alt="Netflix Dashboard">
+  </div>
+</section>
+
+<section>
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mgozqazo" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
-    © 2026 Akshata Deshpande | Data Analyst Portfolio
+  © 2026 Akshata Deshpande | Data Analyst Portfolio
 </footer>
 
 <script>
-    const text = "Data Analyst | SQL | Python | Power BI";
-    let i = 0;
-    function typeEffect() {
-        if (i < text.length) {
-            document.getElementById("typing").innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeEffect, 50);
-        }
-    }
-    typeEffect();
-
-    function toggleMode() {
-        document.body.classList.toggle("dark-mode");
-    }
+function toggleMode() {
+  document.body.classList.toggle("dark");
+}
 </script>
 
 </body>
