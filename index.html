@@ -9,38 +9,53 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    padding: 0;
     background: #f4f6f9;
     color: #333;
 }
 
 header {
-    background: linear-gradient(135deg, #1f2937, #111827);
+    background: linear-gradient(135deg, #111827, #1f2937);
     color: white;
     padding: 60px 20px;
-    text-align: center;
 }
 
-header h1 {
+.hero {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2563eb;
+}
+
+.hero-text h1 {
     margin: 0;
     font-size: 36px;
 }
 
-header p {
+.hero-text p {
     margin: 8px 0;
     font-size: 16px;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 18px;
-    padding: 12px 22px;
+    margin-top: 15px;
+    padding: 10px 20px;
     background: #2563eb;
     color: white;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -49,7 +64,7 @@ header p {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     padding: 50px 20px;
 }
@@ -65,11 +80,11 @@ h2 {
 
 .project {
     background: white;
-    padding: 22px;
+    padding: 25px;
     margin-top: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .project:hover {
@@ -78,20 +93,15 @@ h2 {
 
 .project img {
     width: 100%;
-    margin-top: 15px;
     border-radius: 6px;
+    margin-top: 15px;
 }
 
-/* FORM STYLING */
 form {
     background: white;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-}
-
-label {
-    font-weight: 600;
 }
 
 input, textarea {
@@ -101,8 +111,6 @@ input, textarea {
     margin-bottom: 18px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 14px;
-    transition: border 0.3s ease;
 }
 
 input:focus, textarea:focus {
@@ -111,19 +119,18 @@ input:focus, textarea:focus {
 }
 
 button {
-    padding: 12px 22px;
+    padding: 12px 20px;
     background: #2563eb;
     color: white;
     border: none;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #1e40af;
-    transform: translateY(-2px);
 }
 
 .success-message {
@@ -133,14 +140,13 @@ button:hover {
     background: #d1fae5;
     color: #065f46;
     border-radius: 6px;
-    font-weight: 500;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
     background: #111827;
     color: white;
+    text-align: center;
+    padding: 20px;
 }
 </style>
 </head>
@@ -148,13 +154,19 @@ footer {
 <body>
 
 <header>
-    <h1>Akshata Deshpande</h1>
-    <p>Data Analyst Turning Structured Data into Business Growth Insights</p>
-    <p>SQL • Power BI • Python • KPI Optimization</p>
+    <div class="hero">
+        <img src="profile.jpg" alt="Akshata Deshpande">
 
-    <a href="Akshata_Deshpande_Resume.pdf" class="btn" download>
-        Download Resume
-    </a>
+        <div class="hero-text">
+            <h1>Akshata Deshpande</h1>
+            <p>Data Analyst Turning Structured Data into Business Growth Insights</p>
+            <p>SQL • Power BI • Python • KPI Optimization</p>
+
+            <a href="Akshata_Deshpande_Resume.pdf" class="btn" download>
+                Download Resume
+            </a>
+        </div>
+    </div>
 </header>
 
 <div class="container">
@@ -163,8 +175,9 @@ footer {
     <h2>About Me</h2>
     <p>
         MBA candidate in Artificial Intelligence & Machine Learning with hands-on
-        experience analyzing structured datasets to drive business decisions.
-        I specialize in SQL-based analysis, dashboard development, and KPI-driven insights.
+        experience solving business problems through structured data analysis.
+        I specialize in churn analytics, KPI optimization, and dashboard-driven insights
+        that support strategic decision-making.
     </p>
 </section>
 
@@ -172,39 +185,46 @@ footer {
     <h2>Featured Projects</h2>
 
     <div class="project">
-        <h3>Customer Retention & Revenue Risk Analysis</h3>
-        <p><strong>Impact:</strong> Identified 30%+ revenue exposure through churn segmentation.</p>
+        <h3>Customer Churn & Revenue Risk Analysis</h3>
+        <p><strong>Impact:</strong> Identified 30%+ revenue exposure using SQL-based customer segmentation.</p>
         <p><strong>Tools:</strong> SQL | Python | Power BI</p>
-        <img src="images/churn_dashboard.png" alt="Churn Dashboard">
+        <img src="churn.png" alt="Churn Dashboard">
+        <br><br>
+        <a href="https://github.com/Akshatadeshpande28" class="btn" target="_blank">View on GitHub</a>
     </div>
 
     <div class="project">
-        <h3>Regional Performance & Profitability Analysis</h3>
-        <p><strong>Impact:</strong> Identified 25% profitability improvement potential.</p>
-        <p><strong>Tools:</strong> SQL | Excel | Power BI</p>
-        <img src="images/regional_dashboard.png" alt="Regional Dashboard">
+        <h3>Maven Market Sales Analysis</h3>
+        <p><strong>Impact:</strong> Identified profitability drivers and optimized sales KPIs across product categories.</p>
+        <p><strong>Tools:</strong> SQL | Power BI</p>
+        <img src="maven.png" alt="Maven Dashboard">
+        <br><br>
+        <a href="https://github.com/Akshatadeshpande28" class="btn" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>Netflix Content Strategy Analysis</h3>
+        <p><strong>Impact:</strong> Analyzed content trends to identify genre growth patterns and engagement insights.</p>
+        <p><strong>Tools:</strong> Python | Data Visualization</p>
+        <img src="Netflix.png" alt="Netflix Dashboard">
+        <br><br>
+        <a href="https://github.com/Akshatadeshpande28" class="btn" target="_blank">View on GitHub</a>
     </div>
 
 </section>
 
 <section class="section">
     <h2>Contact Me</h2>
-    <p>If you’d like to discuss analytics opportunities or collaborations, feel free to send a message.</p>
+    <p>Interested in analytics opportunities or collaboration? Send a message below.</p>
 
     <form id="contact-form" action="https://formspree.io/f/mgozqazo" method="POST">
-        <label>Name</label>
-        <input type="text" name="name" required>
-
-        <label>Email</label>
-        <input type="email" name="email" required>
-
-        <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
-
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
 
         <div class="success-message" id="success-message">
-            Thank you for reaching out! I’ll get back to you within 24–48 hours.
+            Thank you for reaching out! I’ll respond within 24–48 hours.
         </div>
     </form>
 </section>
