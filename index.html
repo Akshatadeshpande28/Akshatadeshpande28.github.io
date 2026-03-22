@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 body{
 font-family:'Segoe UI',sans-serif;
 margin:0;
@@ -19,7 +17,6 @@ transition:0.3s;
 }
 
 /* NAVBAR */
-
 nav{
 display:flex;
 justify-content:space-between;
@@ -32,9 +29,7 @@ top:0;
 z-index:10;
 }
 
-nav h3{
-margin:0;
-}
+nav h3{margin:0;}
 
 nav a{
 margin-left:20px;
@@ -43,9 +38,7 @@ color:#374151;
 font-weight:500;
 }
 
-nav a:hover{
-color:#2563eb;
-}
+nav a:hover{color:#2563eb;}
 
 #dark-toggle{
 margin-left:20px;
@@ -58,7 +51,6 @@ border-radius:6px;
 }
 
 /* HERO */
-
 header{
 padding:80px 20px;
 background:white;
@@ -89,11 +81,11 @@ margin:0;
 .hero-text p{
 color:#6b7280;
 margin-top:8px;
+font-size:18px;
 }
 
-.icons{
-margin-top:12px;
-}
+/* ICONS */
+.icons{margin-top:12px;}
 
 .icons a{
 margin-right:15px;
@@ -101,6 +93,7 @@ font-size:22px;
 color:#2563eb;
 }
 
+/* BUTTON */
 .btn{
 display:inline-block;
 margin-top:20px;
@@ -112,12 +105,9 @@ border-radius:6px;
 font-weight:600;
 }
 
-.btn:hover{
-background:#1e40af;
-}
+.btn:hover{background:#1e40af;}
 
 /* CONTAINER */
-
 .container{
 max-width:1100px;
 margin:auto;
@@ -130,7 +120,6 @@ margin-bottom:20px;
 }
 
 /* SKILLS */
-
 .skills{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -151,24 +140,7 @@ color:#2563eb;
 margin-bottom:8px;
 }
 
-/* PROJECT FILTER */
-
-.filter-buttons{
-margin-bottom:30px;
-}
-
-.filter-buttons button{
-margin-right:10px;
-padding:8px 16px;
-border:none;
-background:#2563eb;
-color:white;
-border-radius:6px;
-cursor:pointer;
-}
-
 /* PROJECTS */
-
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -181,18 +153,9 @@ padding:25px;
 border-radius:10px;
 box-shadow:0 6px 20px rgba(0,0,0,0.05);
 transition:0.3s;
-opacity:0;
-transform:translateY(40px);
 }
 
-.project.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.project:hover{
-transform:translateY(-5px);
-}
+.project:hover{transform:translateY(-5px);}
 
 .project img{
 width:100%;
@@ -208,8 +171,15 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* CONTACT */
+/* CTA */
+.cta{
+text-align:center;
+padding:50px 20px;
+background:#e0f2fe;
+border-radius:10px;
+}
 
+/* CONTACT */
 form{
 background:white;
 padding:30px;
@@ -236,7 +206,6 @@ font-weight:600;
 }
 
 /* FOOTER */
-
 footer{
 text-align:center;
 padding:20px;
@@ -246,7 +215,6 @@ color:#6b7280;
 }
 
 /* DARK MODE */
-
 .dark-mode{
 background:#111827;
 color:#f3f4f6;
@@ -264,55 +232,44 @@ background:#1f2937;
 background:#1f2937;
 color:white;
 }
-
 </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-
 <nav>
-
 <h3>Akshata Deshpande</h3>
-
 <div>
-
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-
 <button id="dark-toggle">🌙</button>
-
 </div>
-
 </nav>
 
 <!-- HERO -->
-
 <header>
-
 <div class="hero">
 
 <img src="profile.jpg">
 
 <div class="hero-text">
-
 <h1>Akshata Deshpande</h1>
 
-<p>Data Analyst | SQL • Python • Power BI • KPI Optimization</p>
+<p>
+Aspiring Data Analyst | Turning Data into Business Insights 📊<br>
+SQL • Python • Power BI • Data-Driven Decision Making
+</p>
 
 <div class="icons">
-
 <a href="https://www.linkedin.com/in/akshatadeshpande28/" target="_blank">
 <i class="fab fa-linkedin"></i>
 </a>
-
 <a href="https://github.com/Akshatadeshpande28" target="_blank">
 <i class="fab fa-github"></i>
 </a>
-
 </div>
 
 <a href="Akshata_Deshpande_Resume.pdf" class="btn" download>
@@ -320,181 +277,123 @@ Download Resume
 </a>
 
 </div>
-
 </div>
-
 </header>
-
 
 <div class="container">
 
 <!-- ABOUT -->
-
 <section id="about">
-
 <h2>About Me</h2>
-
 <p>
-MBA candidate in Artificial Intelligence & Machine Learning focused on solving
-business problems through structured data analysis, churn modeling,
-KPI optimization, and dashboard-driven insights.
-</p>
+Aspiring Data Analyst with hands-on experience in SQL, Python, and Power BI,
+focused on transforming raw data into actionable business insights.
 
+I have worked on projects involving customer churn analysis, revenue optimization,
+and KPI dashboards—helping identify key drivers of business performance.
+
+Passionate about solving real-world problems using data-driven decision making
+and continuously improving analytical thinking.
+</p>
 </section>
 
-
 <!-- SKILLS -->
-
 <section id="skills">
-
 <h2>Skills</h2>
-
 <div class="skills">
-
 <div class="skill"><i class="fa-solid fa-database"></i><p>SQL</p></div>
 <div class="skill"><i class="fa-brands fa-python"></i><p>Python</p></div>
 <div class="skill"><i class="fa-solid fa-chart-column"></i><p>Power BI</p></div>
 <div class="skill"><i class="fa-solid fa-table"></i><p>Excel</p></div>
 <div class="skill"><i class="fa-solid fa-chart-line"></i><p>Data Analysis</p></div>
 <div class="skill"><i class="fa-solid fa-brain"></i><p>Machine Learning</p></div>
-
 </div>
-
 </section>
 
-
 <!-- PROJECTS -->
-
 <section id="projects">
-
 <h2>Featured Projects</h2>
-
-<div class="filter-buttons">
-<button onclick="filterProjects('all')">All</button>
-<button onclick="filterProjects('python')">Python</button>
-<button onclick="filterProjects('powerbi')">Power BI</button>
-<button onclick="filterProjects('sql')">SQL</button>
-</div>
 
 <div class="projects">
 
-<div class="project python">
+<div class="project">
 <h3>Customer Churn & Revenue Risk Analysis</h3>
-<p>Identified 30%+ revenue exposure through segmentation analysis.</p>
+<p>
+Identified 30%+ revenue at risk due to customer churn using segmentation analysis,
+highlighting the need for targeted retention strategies.
+</p>
 <img src="churn.png">
 <a href="https://github.com/Akshatadeshpande28">View Project →</a>
 </div>
 
-<div class="project powerbi">
+<div class="project">
 <h3>Maven Market Sales Analysis</h3>
-<p>Analyzed profitability drivers across product categories.</p>
+<p>
+Identified key product categories driving profitability and revenue growth,
+supporting better inventory and pricing decisions.
+</p>
 <img src="maven.png">
 <a href="https://github.com/Akshatadeshpande28">View Project →</a>
 </div>
 
-<div class="project powerbi">
+<div class="project">
 <h3>D2C Multi-Channel Performance Dashboard</h3>
-<p>KPI dashboard tracking CAC, ROAS, revenue drivers and inventory risk.</p>
+<p>
+Built KPI dashboard tracking CAC, ROAS, and revenue drivers,
+helping optimize marketing performance and inventory planning.
+</p>
 <img src="D2C Dashboard.png">
 <a href="https://github.com/Akshatadeshpande28">View Project →</a>
 </div>
 
-<div class="project python">
+<div class="project">
 <h3>Netflix Content Strategy Analysis</h3>
-<p>Analyzed genre trends and engagement insights.</p>
+<p>
+Identified high-performing genres and content patterns driving engagement,
+helping optimize content strategy decisions.
+</p>
 <img src="Netflix.png">
 <a href="https://github.com/Akshatadeshpande28">View Project →</a>
 </div>
 
 </div>
-
 </section>
 
+<!-- CTA -->
+<section class="cta">
+<h2>🚀 Open to Opportunities</h2>
+<p>
+Actively seeking Data Analyst / AI roles where I can apply my skills
+to solve real-world business problems using data.
+</p>
+<a href="https://www.linkedin.com/in/akshatadeshpande28/" class="btn" target="_blank">
+Let's Connect
+</a>
+</section>
 
 <!-- CONTACT -->
-
 <section id="contact">
-
 <h2>Contact</h2>
-
 <form action="https://formspree.io/f/mgozqazo" method="POST">
-
 <input type="text" name="name" placeholder="Your Name" required>
-
 <input type="email" name="email" placeholder="Your Email" required>
-
 <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-
 <button type="submit">Send Message</button>
-
 </form>
-
 </section>
 
 </div>
-
 
 <footer>
 © 2026 Akshata Deshpande | Data Analytics Portfolio
 </footer>
 
-
 <script>
-
-/* DARK MODE */
-
 const toggle = document.getElementById("dark-toggle");
-
 toggle.addEventListener("click", () => {
 document.body.classList.toggle("dark-mode");
 });
-
-
-/* PROJECT FILTER */
-
-function filterProjects(category){
-
-const projects = document.querySelectorAll(".project");
-
-projects.forEach(project => {
-
-if(category==="all"){
-project.style.display="block";
-}
-
-else if(project.classList.contains(category)){
-project.style.display="block";
-}
-
-else{
-project.style.display="none";
-}
-
-});
-
-}
-
-
-/* SCROLL ANIMATION */
-
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-
-});
-
-});
-
-document.querySelectorAll(".project").forEach(project=>{
-observer.observe(project);
-});
-
 </script>
 
 </body>
 </html>
-```
