@@ -1,21 +1,23 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Akshata Deshpande | Data Analyst Portfolio</title>
 
-<meta name="description" content="Akshata Deshpande - Data Analyst portfolio showcasing SQL, Python, Power BI, Excel, analytics dashboards and data applications.">
+<meta name="description"
+content="Akshata Deshpande - Data Analyst portfolio showcasing SQL, Python, Power BI, Excel, analytics dashboards and data applications.">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* =========================
+/* =====================================
    GLOBAL
-========================= */
+===================================== */
 
 *{
     box-sizing:border-box;
@@ -55,14 +57,10 @@ h2{
     margin-bottom:35px;
 }
 
-a{
-    transition:0.2s;
-}
 
-
-/* =========================
+/* =====================================
    NAVBAR
-========================= */
+===================================== */
 
 nav{
     display:flex;
@@ -111,9 +109,9 @@ nav{
 }
 
 
-/* =========================
+/* =====================================
    HERO
-========================= */
+===================================== */
 
 header{
     background:white;
@@ -187,11 +185,12 @@ header{
     text-decoration:none;
     border-radius:7px;
     font-weight:600;
+    transition:0.2s;
 }
 
 .btn:hover{
     background:#1d4ed8;
-    transform:translateY(-1px);
+    transform:translateY(-2px);
 }
 
 .btn-secondary{
@@ -202,6 +201,7 @@ header{
 
 .btn-secondary:hover{
     background:#eff6ff;
+    color:#2563eb;
 }
 
 .social-icons{
@@ -219,9 +219,9 @@ header{
 }
 
 
-/* =========================
+/* =====================================
    QUICK STATS
-========================= */
+===================================== */
 
 .stats{
     display:grid;
@@ -257,9 +257,9 @@ header{
 }
 
 
-/* =========================
+/* =====================================
    ABOUT
-========================= */
+===================================== */
 
 .about-text{
     font-size:17px;
@@ -268,9 +268,9 @@ header{
 }
 
 
-/* =========================
+/* =====================================
    SKILLS
-========================= */
+===================================== */
 
 .skills{
     display:grid;
@@ -308,9 +308,9 @@ header{
 }
 
 
-/* =========================
+/* =====================================
    PROJECTS
-========================= */
+===================================== */
 
 .projects{
     display:grid;
@@ -388,7 +388,9 @@ header{
 }
 
 
-/* FEATURED PROJECT */
+/* =====================================
+   FEATURED PROJECT
+===================================== */
 
 .project.featured{
     grid-column:1 / -1;
@@ -398,13 +400,42 @@ header{
 
 .project.featured img{
     height:100%;
-    min-height:330px;
+    min-height:390px;
 }
 
 
-/* =========================
+/* =====================================
+   PROJECT BUTTONS
+===================================== */
+
+.project-buttons{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:12px;
+}
+
+.project-buttons .project-link{
+    margin-top:0;
+}
+
+.live-demo{
+    background:#2563eb;
+    color:white !important;
+    padding:8px 16px;
+    border-radius:6px;
+}
+
+.live-demo:hover{
+    background:#1d4ed8;
+    color:white !important;
+}
+
+
+/* =====================================
    CERTIFICATIONS
-========================= */
+===================================== */
 
 .certifications{
     display:grid;
@@ -436,15 +467,16 @@ header{
 }
 
 
-/* =========================
+/* =====================================
    CTA
-========================= */
+===================================== */
 
 .cta{
     text-align:center;
     padding:55px 25px;
     background:#eaf4ff;
     border-radius:14px;
+    margin-top:20px;
 }
 
 .cta h2{
@@ -458,9 +490,9 @@ header{
 }
 
 
-/* =========================
+/* =====================================
    CONTACT
-========================= */
+===================================== */
 
 .contact-wrapper{
     display:grid;
@@ -520,9 +552,9 @@ button[type="submit"]:hover{
 }
 
 
-/* =========================
+/* =====================================
    FOOTER
-========================= */
+===================================== */
 
 footer{
     text-align:center;
@@ -534,9 +566,9 @@ footer{
 }
 
 
-/* =========================
+/* =====================================
    DARK MODE
-========================= */
+===================================== */
 
 .dark-mode{
     background:#111827;
@@ -603,9 +635,9 @@ footer{
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
 
 @media(max-width:800px){
 
@@ -631,6 +663,10 @@ footer{
         justify-content:center;
     }
 
+    .social-icons{
+        text-align:center;
+    }
+
     .stats{
         margin:20px;
         grid-template-columns:repeat(2,1fr);
@@ -653,12 +689,15 @@ footer{
 
     .project.featured img{
         min-height:220px;
+        height:auto;
     }
 
     .container{
         padding:55px 20px;
     }
+
 }
+
 
 @media(max-width:480px){
 
@@ -679,6 +718,11 @@ footer{
         grid-template-columns:1fr 1fr;
     }
 
+    .project-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
 }
 
 </style>
@@ -688,13 +732,15 @@ footer{
 <body>
 
 
-<!-- =========================
+<!-- =====================================
      NAVBAR
-========================= -->
+===================================== -->
 
 <nav>
 
-<div class="logo">Akshata Deshpande</div>
+<div class="logo">
+Akshata Deshpande
+</div>
 
 <div class="nav-links">
 
@@ -704,30 +750,41 @@ footer{
 <a href="#certifications">Certifications</a>
 <a href="#contact">Contact</a>
 
-<button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+<button id="dark-toggle" aria-label="Toggle dark mode">
+🌙
+</button>
 
 </div>
 
 </nav>
 
 
-<!-- =========================
+<!-- =====================================
      HERO
-========================= -->
+===================================== -->
 
 <header>
 
 <div class="hero">
 
 <div class="hero-image">
-<img src="profile.jpg" alt="Akshata Deshpande">
+
+<img
+src="profile.jpg"
+alt="Akshata Deshpande">
+
 </div>
+
 
 <div class="hero-text">
 
-<p class="hello">Hello, I'm</p>
+<p class="hello">
+Hello, I'm
+</p>
 
-<h1>Akshata Deshpande</h1>
+<h1>
+Akshata Deshpande
+</h1>
 
 <p class="hero-title">
 Data Analyst | SQL • Python • Power BI
@@ -739,30 +796,48 @@ analytics, visualization, dashboard development, and data-driven
 problem solving.
 </p>
 
+
 <div class="hero-buttons">
 
 <a href="#projects" class="btn">
+<i class="fa-solid fa-chart-line"></i>
 View My Projects
 </a>
 
-<a href="Akshata_Deshpande_Resume.pdf" class="btn btn-secondary" download>
-<i class="fa-solid fa-download"></i> Download Resume
+<a
+href="Akshata_Deshpande_Resume.pdf"
+class="btn btn-secondary"
+download>
+
+<i class="fa-solid fa-download"></i>
+Download Resume
+
 </a>
 
 </div>
 
+
 <div class="social-icons">
 
-<a href="https://www.linkedin.com/in/akshatadeshpande28/"
+<a
+href="https://www.linkedin.com/in/akshatadeshpande28/"
 target="_blank"
+rel="noopener noreferrer"
 aria-label="LinkedIn">
+
 <i class="fab fa-linkedin"></i>
+
 </a>
 
-<a href="https://github.com/Akshatadeshpande28"
+
+<a
+href="https://github.com/Akshatadeshpande28"
 target="_blank"
+rel="noopener noreferrer"
 aria-label="GitHub">
+
 <i class="fab fa-github"></i>
+
 </a>
 
 </div>
@@ -774,9 +849,9 @@ aria-label="GitHub">
 </header>
 
 
-<!-- =========================
+<!-- =====================================
      QUICK STATS
-========================= -->
+===================================== -->
 
 <div class="stats">
 
@@ -806,47 +881,54 @@ aria-label="GitHub">
 <div class="container">
 
 
-<!-- =========================
+<!-- =====================================
      ABOUT
-========================= -->
+===================================== -->
 
 <section id="about">
 
-<h2>About Me</h2>
+<h2>
+About Me
+</h2>
 
 <p class="section-subtitle">
 Turning data into meaningful business decisions.
 </p>
 
 <p class="about-text">
-I'm a Data Analyst with hands-on experience in SQL, Python, Power BI,
-and Excel, focused on transforming raw data into actionable business
-insights.
+
+I'm a Data Analyst with hands-on experience in SQL, Python,
+Power BI, and Excel, focused on transforming raw data into
+actionable business insights.
 
 My projects span customer churn analysis, revenue risk assessment,
-retail performance, multi-channel marketing analytics, content strategy,
-and automated data applications.
+retail performance, multi-channel marketing analytics, content
+strategy, and automated analytics applications.
 
-I enjoy working across the analytics lifecycle—from data cleaning and
-exploratory analysis to KPI development, visualization, dashboard
-creation, and communicating insights that support better business
-decisions.
+I enjoy working across the analytics lifecycle — from data cleaning
+and exploratory analysis to KPI development, visualization,
+dashboard creation, and communicating insights that support
+better business decisions.
+
 </p>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================
      SKILLS
-========================= -->
+===================================== -->
 
 <section id="skills">
 
-<h2>Technical Skills</h2>
+<h2>
+Technical Skills
+</h2>
 
 <p class="section-subtitle">
 Tools and technologies I use to analyze data and solve business problems.
 </p>
+
 
 <div class="skills">
 
@@ -940,13 +1022,15 @@ Clustering • Model Evaluation • ML Fundamentals
 </section>
 
 
-<!-- =========================
+<!-- =====================================
      PROJECTS
-========================= -->
+===================================== -->
 
 <section id="projects">
 
-<h2>Featured Projects</h2>
+<h2>
+Featured Projects
+</h2>
 
 <p class="section-subtitle">
 Turning raw data into business insights, dashboards, and analytics applications.
@@ -956,13 +1040,17 @@ Turning raw data into business insights, dashboards, and analytics applications.
 <div class="projects">
 
 
-<!-- DATA INSIGHTS PRO -->
+<!-- =====================================
+     PROJECT 01 - DATA INSIGHTS PRO
+===================================== -->
 
 <div class="project featured">
 
-<img src="data-insights.png"
-alt="Data Insights Pro analytics web application"
-onerror="this.style.display='none'">
+
+<img
+src="data-insights.png"
+alt="Data Insights Pro CSV Analytics Dashboard">
+
 
 <div class="project-content">
 
@@ -970,77 +1058,123 @@ onerror="this.style.display='none'">
 01 • Featured Project
 </span>
 
+
 <h3>
-Data Insights Pro — Automated CSV Analytics Web App
+Data Insights Pro — CSV Analytics Web App
 </h3>
 
+
 <p class="project-tools">
-Python • Flask • Pandas • Matplotlib
+Python • Flask • Pandas • Plotly • Data Analytics
 </p>
+
 
 <p class="project-description">
-Developed a Flask-based analytics web application that allows users
-to upload CSV datasets and automatically explore their data through
-summary statistics, column-level insights, and visualizations.
+
+Developed a Flask-based analytics web application that enables
+users to upload CSV datasets, explore and filter data, detect
+and clean data-quality issues, generate automated insights,
+create interactive visualizations, and export processed datasets.
+
 </p>
 
+
 <div class="insight">
+
 <strong>Key Highlight:</strong>
-Transforms raw CSV files into an accessible analytics experience,
-allowing users to explore their data without writing Python code.
+
+Provides an end-to-end self-service analytics workflow — from
+CSV upload and data cleaning to automated insights, interactive
+visualization, filtering, and dataset export.
+
 </div>
+
+
+<div class="project-buttons">
+
 
 <a
 href="https://github.com/Akshatadeshpande28/CSV-Flask-Dashboard"
 target="_blank"
+rel="noopener noreferrer"
 class="project-link">
 
 <i class="fab fa-github"></i>
-View Project →
+View Code →
 
 </a>
 
+
+<a
+href="https://csv-flask-dashboard.onrender.com"
+target="_blank"
+rel="noopener noreferrer"
+class="project-link live-demo">
+
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
+Live Demo →
+
+</a>
+
+
+</div>
+
 </div>
 
 </div>
 
 
-<!-- CHURN -->
+<!-- =====================================
+     PROJECT 02 - CHURN
+===================================== -->
 
 <div class="project">
 
-<img src="churn.png"
+<img
+src="churn.png"
 alt="Customer Churn Analysis Dashboard">
+
 
 <div class="project-content">
 
-<span class="project-number">02 • Analytics</span>
+<span class="project-number">
+02 • Customer Analytics
+</span>
+
 
 <h3>
 Customer Churn & Revenue Risk Analysis
 </h3>
 
+
 <p class="project-tools">
 SQL • Data Analysis • Customer Segmentation
 </p>
 
+
 <p class="project-description">
+
 Analyzed customer behavior and churn patterns to identify
 high-risk customer segments and understand the potential
 business impact of customer attrition.
+
 </p>
+
 
 <div class="insight">
 
 <strong>Key Insight:</strong>
+
 Identified 30%+ of revenue at risk from customer churn,
 highlighting the need for targeted retention strategies.
 
 </div>
 
+
 <a
 href="https://github.com/Akshatadeshpande28/data-analytics-portfolio/tree/main/Churn%20Analysis"
 target="_blank"
+rel="noopener noreferrer"
 class="project-link">
 
 <i class="fab fa-github"></i>
@@ -1053,42 +1187,57 @@ View Project →
 </div>
 
 
-<!-- D2C -->
+<!-- =====================================
+     PROJECT 03 - D2C
+===================================== -->
 
 <div class="project">
 
-<img src="D2C Dashboard.png"
+<img
+src="D2C Dashboard.png"
 alt="D2C Multi Channel Performance Dashboard">
+
 
 <div class="project-content">
 
-<span class="project-number">03 • Business Intelligence</span>
+<span class="project-number">
+03 • Business Intelligence
+</span>
+
 
 <h3>
 D2C Multi-Channel Performance Dashboard
 </h3>
 
+
 <p class="project-tools">
 Power BI • DAX • Data Modeling • KPI Analysis
 </p>
 
+
 <p class="project-description">
-Built an interactive dashboard to analyze revenue,
+
+Built an interactive Power BI dashboard to analyze revenue,
 marketing efficiency, channel performance, customer acquisition,
 and profitability across multiple sales channels.
+
 </p>
+
 
 <div class="insight">
 
 <strong>Business Focus:</strong>
-Tracked CAC, ROAS and revenue drivers to support
+
+Tracked CAC, ROAS, profitability, and revenue drivers to support
 marketing optimization and inventory planning.
 
 </div>
 
+
 <a
 href="https://github.com/Akshatadeshpande28/data-analytics-portfolio/tree/main/D2C-MultiChannel-Dashboard"
 target="_blank"
+rel="noopener noreferrer"
 class="project-link">
 
 <i class="fab fa-github"></i>
@@ -1101,42 +1250,58 @@ View Project →
 </div>
 
 
-<!-- MAVEN -->
+<!-- =====================================
+     PROJECT 04 - MAVEN MARKET
+===================================== -->
 
 <div class="project">
 
-<img src="maven.png"
+<img
+src="maven.png"
 alt="Maven Market Sales Dashboard">
+
 
 <div class="project-content">
 
-<span class="project-number">04 • Retail Analytics</span>
+<span class="project-number">
+04 • Retail Analytics
+</span>
+
 
 <h3>
 Maven Market Sales Analysis
 </h3>
 
+
 <p class="project-tools">
 Power BI • SQL • Power Query • Data Analysis
 </p>
 
+
 <p class="project-description">
+
 Analyzed retail transaction and product performance data
 to understand sales trends, profitability, returns,
 and category-level business performance.
+
 </p>
+
 
 <div class="insight">
 
 <strong>Business Focus:</strong>
+
 Identified key product categories driving profitability
-and revenue growth to support better inventory and pricing decisions.
+and revenue growth to support better inventory and pricing
+decisions.
 
 </div>
+
 
 <a
 href="https://github.com/Akshatadeshpande28/data-analytics-portfolio/tree/main/Maven%20Analytics"
 target="_blank"
+rel="noopener noreferrer"
 class="project-link">
 
 <i class="fab fa-github"></i>
@@ -1149,42 +1314,57 @@ View Project →
 </div>
 
 
-<!-- NETFLIX -->
+<!-- =====================================
+     PROJECT 05 - NETFLIX
+===================================== -->
 
 <div class="project">
 
-<img src="Netflix.png"
+<img
+src="Netflix.png"
 alt="Netflix Content Strategy Analysis">
+
 
 <div class="project-content">
 
-<span class="project-number">05 • Python Analytics</span>
+<span class="project-number">
+05 • Python Analytics
+</span>
+
 
 <h3>
 Netflix Content Strategy Analysis
 </h3>
 
+
 <p class="project-tools">
 Python • Pandas • Data Visualization • EDA
 </p>
 
+
 <p class="project-description">
+
 Explored Netflix content data to identify patterns across
-genres, content types, releases, and audience-focused
-content characteristics.
+genres, content types, release trends, and other content
+characteristics.
+
 </p>
+
 
 <div class="insight">
 
 <strong>Business Focus:</strong>
-Identified high-performing genres and content patterns
-that can support data-informed content strategy decisions.
+
+Identified content and genre patterns that can support
+data-informed content strategy and programming decisions.
 
 </div>
+
 
 <a
 href="https://github.com/Akshatadeshpande28/data-analytics-portfolio/tree/main/Netflix%20Data%20Analysis"
 target="_blank"
+rel="noopener noreferrer"
 class="project-link">
 
 <i class="fab fa-github"></i>
@@ -1202,17 +1382,20 @@ View Project →
 </section>
 
 
-<!-- =========================
+<!-- =====================================
      CERTIFICATIONS
-========================= -->
+===================================== -->
 
 <section id="certifications">
 
-<h2>Certifications & Learning</h2>
+<h2>
+Certifications & Learning
+</h2>
 
 <p class="section-subtitle">
 Continuous learning across analytics, programming, and business intelligence.
 </p>
+
 
 <div class="certifications">
 
@@ -1264,25 +1447,32 @@ Introduction to Computer Science — Harvard
 </section>
 
 
-<!-- =========================
-     OPPORTUNITIES
-========================= -->
+<!-- =====================================
+     OPEN TO OPPORTUNITIES
+===================================== -->
 
 <section class="cta">
 
-<h2>🚀 Open to Data Analytics Opportunities</h2>
+<h2>
+🚀 Open to Data Analytics Opportunities
+</h2>
+
 
 <p>
+
 I'm actively seeking Data Analyst, Business Analytics, and
 Business Intelligence opportunities where I can apply SQL,
 Python, Power BI, and analytical problem-solving to support
 data-driven business decisions.
+
 </p>
+
 
 <a
 href="https://www.linkedin.com/in/akshatadeshpande28/"
 class="btn"
-target="_blank">
+target="_blank"
+rel="noopener noreferrer">
 
 <i class="fab fa-linkedin"></i>
 Let's Connect
@@ -1292,16 +1482,21 @@ Let's Connect
 </section>
 
 
-<!-- =========================
+<!-- =====================================
      CONTACT
-========================= -->
+===================================== -->
 
 <section id="contact">
 
-<h2>Let's Connect</h2>
+<h2>
+Let's Connect
+</h2>
 
 <p class="section-subtitle">
-Interested in discussing a role, project, or analytics opportunity? I'd be happy to connect.
+
+Interested in discussing a role, project, or analytics opportunity?
+I'd be happy to connect.
+
 </p>
 
 
@@ -1310,19 +1505,26 @@ Interested in discussing a role, project, or analytics opportunity? I'd be happy
 
 <div class="contact-info">
 
-<h3>Get in Touch</h3>
+<h3>
+Get in Touch
+</h3>
 
 <p>
+
 You can reach me through LinkedIn, GitHub, or the contact
 form. I'm open to conversations around data analytics,
 business intelligence, and data-driven problem solving.
+
 </p>
+
 
 <div class="contact-links">
 
+
 <a
 href="https://www.linkedin.com/in/akshatadeshpande28/"
-target="_blank">
+target="_blank"
+rel="noopener noreferrer">
 
 <i class="fab fa-linkedin"></i>
 LinkedIn
@@ -1332,12 +1534,14 @@ LinkedIn
 
 <a
 href="https://github.com/Akshatadeshpande28"
-target="_blank">
+target="_blank"
+rel="noopener noreferrer">
 
 <i class="fab fa-github"></i>
 GitHub
 
 </a>
+
 
 </div>
 
@@ -1348,11 +1552,13 @@ GitHub
 action="https://formspree.io/f/mgozqazo"
 method="POST">
 
+
 <input
 type="text"
 name="name"
 placeholder="Your Name"
 required>
+
 
 <input
 type="email"
@@ -1360,19 +1566,23 @@ name="email"
 placeholder="Your Email"
 required>
 
+
 <textarea
 name="message"
 rows="5"
 placeholder="Your Message"
 required></textarea>
 
+
 <button type="submit">
+
 <i class="fa-solid fa-paper-plane"></i>
 Send Message
+
 </button>
 
-</form>
 
+</form>
 
 </div>
 
@@ -1382,21 +1592,20 @@ Send Message
 </div>
 
 
-<!-- =========================
+<!-- =====================================
      FOOTER
-========================= -->
+===================================== -->
 
 <footer>
 
-© 2026 Akshata Deshpande |
-Data Analytics Portfolio
+© 2026 Akshata Deshpande | Data Analytics Portfolio
 
 </footer>
 
 
-<!-- =========================
+<!-- =====================================
      JAVASCRIPT
-========================= -->
+===================================== -->
 
 <script>
 
@@ -1407,12 +1616,15 @@ toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
     if(document.body.classList.contains("dark-mode")){
+
         toggle.textContent = "☀️";
         localStorage.setItem("theme","dark");
-    }
-    else{
+
+    }else{
+
         toggle.textContent = "🌙";
         localStorage.setItem("theme","light");
+
     }
 
 });
@@ -1430,4 +1642,3 @@ if(localStorage.getItem("theme") === "dark"){
 
 </body>
 </html>
-```
