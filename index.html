@@ -1,399 +1,1433 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Akshata Deshpande | Data Analyst Portfolio</title>
+
+<meta name="description" content="Akshata Deshpande - Data Analyst portfolio showcasing SQL, Python, Power BI, Excel, analytics dashboards and data applications.">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:'Segoe UI',sans-serif;
-margin:0;
-background:#f8fafc;
-color:#1f2937;
-transition:0.3s;
+    font-family:'Segoe UI',Arial,sans-serif;
+    margin:0;
+    background:#f8fafc;
+    color:#1f2937;
+    line-height:1.7;
+    transition:background 0.3s,color 0.3s;
 }
 
-/* NAVBAR */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 40px;
-background:white;
-border-bottom:1px solid #e5e7eb;
-position:sticky;
-top:0;
-z-index:10;
-}
-
-nav h3{margin:0;}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#374151;
-font-weight:500;
-}
-
-nav a:hover{color:#2563eb;}
-
-#dark-toggle{
-margin-left:20px;
-cursor:pointer;
-border:none;
-background:#2563eb;
-color:white;
-padding:6px 12px;
-border-radius:6px;
-}
-
-/* HERO */
-header{
-padding:80px 20px;
-background:white;
-}
-
-.hero{
-max-width:1100px;
-margin:auto;
-display:flex;
-align-items:center;
-gap:60px;
-flex-wrap:wrap;
-}
-
-.hero img{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #2563eb;
-}
-
-.hero-text h1{
-font-size:38px;
-margin:0;
-}
-
-.hero-text p{
-color:#6b7280;
-margin-top:8px;
-font-size:18px;
-}
-
-/* ICONS */
-.icons{margin-top:12px;}
-
-.icons a{
-margin-right:15px;
-font-size:22px;
-color:#2563eb;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:10px 24px;
-background:#2563eb;
-color:white;
-text-decoration:none;
-border-radius:6px;
-font-weight:600;
-}
-
-.btn:hover{background:#1e40af;}
-
-/* CONTAINER */
 .container{
-max-width:1100px;
-margin:auto;
-padding:70px 20px;
+    max-width:1100px;
+    margin:auto;
+    padding:75px 25px;
+}
+
+section{
+    scroll-margin-top:90px;
+}
+
+h1,h2,h3,p{
+    margin-top:0;
 }
 
 h2{
-font-size:26px;
-margin-bottom:20px;
+    font-size:30px;
+    margin-bottom:8px;
 }
 
-/* SKILLS */
+.section-subtitle{
+    color:#6b7280;
+    margin-bottom:35px;
+}
+
+a{
+    transition:0.2s;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:17px 40px;
+    background:rgba(255,255,255,0.96);
+    border-bottom:1px solid #e5e7eb;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:18px;
+    font-weight:700;
+    color:#111827;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+}
+
+.nav-links a{
+    margin-left:22px;
+    text-decoration:none;
+    color:#374151;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+#dark-toggle{
+    margin-left:20px;
+    cursor:pointer;
+    border:none;
+    background:#2563eb;
+    color:white;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    font-size:16px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+header{
+    background:white;
+    padding:90px 25px;
+}
+
+.hero{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:65px;
+}
+
+.hero-image{
+    flex-shrink:0;
+}
+
+.hero img{
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #dbeafe;
+    box-shadow:0 12px 35px rgba(37,99,235,0.15);
+}
+
+.hero-text{
+    max-width:700px;
+}
+
+.hello{
+    color:#2563eb;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.hero-text h1{
+    font-size:46px;
+    line-height:1.15;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.hero-title{
+    font-size:21px;
+    font-weight:600;
+    color:#2563eb;
+    margin-bottom:12px;
+}
+
+.hero-description{
+    font-size:17px;
+    color:#6b7280;
+    max-width:650px;
+}
+
+.hero-buttons{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:11px 23px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-1px);
+}
+
+.btn-secondary{
+    background:white;
+    color:#2563eb;
+    border:1px solid #2563eb;
+}
+
+.btn-secondary:hover{
+    background:#eff6ff;
+}
+
+.social-icons{
+    margin-top:22px;
+}
+
+.social-icons a{
+    margin-right:18px;
+    font-size:24px;
+    color:#2563eb;
+}
+
+.social-icons a:hover{
+    color:#1e40af;
+}
+
+
+/* =========================
+   QUICK STATS
+========================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    max-width:1100px;
+    margin:-30px auto 0;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.07);
+    position:relative;
+    z-index:5;
+}
+
+.stat{
+    text-align:center;
+    padding:25px 10px;
+    border-right:1px solid #e5e7eb;
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+    color:#2563eb;
+    font-size:20px;
+}
+
+.stat span{
+    font-size:13px;
+    color:#6b7280;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-text{
+    font-size:17px;
+    color:#4b5563;
+    max-width:950px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
 .skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .skill{
-background:white;
-padding:20px;
-text-align:center;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .skill i{
-font-size:28px;
-color:#2563eb;
-margin-bottom:8px;
+    font-size:28px;
+    color:#2563eb;
+    margin-bottom:10px;
 }
 
-/* PROJECTS */
+.skill h3{
+    margin-bottom:7px;
+}
+
+.skill p{
+    color:#6b7280;
+    font-size:14px;
+    margin-bottom:0;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
 .projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
 }
 
 .project{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
-transition:0.3s;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 22px rgba(0,0,0,0.06);
+    transition:0.3s;
+    border:1px solid #f1f5f9;
 }
 
-.project:hover{transform:translateY(-5px);}
+.project:hover{
+    transform:translateY(-6px);
+    box-shadow:0 14px 32px rgba(0,0,0,0.10);
+}
 
 .project img{
-width:100%;
-border-radius:6px;
-margin-top:12px;
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
 }
 
-.project a{
-display:inline-block;
-margin-top:10px;
-color:#2563eb;
-text-decoration:none;
-font-weight:600;
+.project-content{
+    padding:25px;
 }
 
-/* CTA */
+.project-number{
+    font-size:13px;
+    font-weight:700;
+    color:#2563eb;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.project h3{
+    font-size:21px;
+    margin:5px 0 8px;
+}
+
+.project-tools{
+    font-size:13px;
+    color:#2563eb;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.project-description{
+    color:#6b7280;
+    font-size:15px;
+}
+
+.insight{
+    background:#eff6ff;
+    padding:12px 15px;
+    border-radius:7px;
+    font-size:14px;
+    margin:16px 0;
+}
+
+.project-link{
+    display:inline-block;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.project-link:hover{
+    color:#1e40af;
+}
+
+
+/* FEATURED PROJECT */
+
+.project.featured{
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:1.05fr 1fr;
+}
+
+.project.featured img{
+    height:100%;
+    min-height:330px;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certifications{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.cert{
+    background:white;
+    padding:22px;
+    border-radius:10px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.05);
+}
+
+.cert i{
+    color:#2563eb;
+    margin-right:7px;
+}
+
+.cert h3{
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.cert p{
+    color:#6b7280;
+    font-size:14px;
+    margin:0;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
 .cta{
-text-align:center;
-padding:50px 20px;
-background:#e0f2fe;
-border-radius:10px;
+    text-align:center;
+    padding:55px 25px;
+    background:#eaf4ff;
+    border-radius:14px;
 }
 
-/* CONTACT */
+.cta h2{
+    margin-bottom:10px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 22px;
+    color:#4b5563;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:40px;
+}
+
+.contact-info p{
+    color:#6b7280;
+}
+
+.contact-links a{
+    display:block;
+    color:#2563eb;
+    text-decoration:none;
+    margin-bottom:12px;
+}
+
+.contact-links i{
+    width:25px;
+}
+
 form{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.05);
 }
 
-input,textarea{
-width:100%;
-padding:12px;
-margin-bottom:16px;
-border-radius:6px;
-border:1px solid #d1d5db;
+input,
+textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:16px;
+    border-radius:6px;
+    border:1px solid #d1d5db;
+    font-family:inherit;
+    font-size:14px;
 }
 
-button{
-background:#2563eb;
-color:white;
-border:none;
-padding:12px 22px;
-border-radius:6px;
-cursor:pointer;
-font-weight:600;
+textarea{
+    resize:vertical;
 }
 
-/* FOOTER */
+button[type="submit"]{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+button[type="submit"]:hover{
+    background:#1d4ed8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-text-align:center;
-padding:20px;
-border-top:1px solid #e5e7eb;
-background:white;
-color:#6b7280;
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #e5e7eb;
+    background:white;
+    color:#6b7280;
+    font-size:14px;
 }
 
-/* DARK MODE */
+
+/* =========================
+   DARK MODE
+========================= */
+
 .dark-mode{
-background:#111827;
-color:#f3f4f6;
+    background:#111827;
+    color:#f3f4f6;
 }
 
-.dark-mode header,
 .dark-mode nav,
-.dark-mode footer{
-background:#1f2937;
+.dark-mode header,
+.dark-mode footer,
+.dark-mode .stats,
+.dark-mode .skill,
+.dark-mode .project,
+.dark-mode .cert,
+.dark-mode form{
+    background:#1f2937;
+    color:#f3f4f6;
 }
 
-.dark-mode .project,
-.dark-mode .skill,
-.dark-mode form{
-background:#1f2937;
-color:white;
+.dark-mode .logo,
+.dark-mode .hero-text h1{
+    color:white;
 }
+
+.dark-mode .nav-links a{
+    color:#d1d5db;
+}
+
+.dark-mode .hero-description,
+.dark-mode .section-subtitle,
+.dark-mode .about-text,
+.dark-mode .skill p,
+.dark-mode .project-description,
+.dark-mode .cert p,
+.dark-mode .contact-info p,
+.dark-mode .stat span{
+    color:#cbd5e1;
+}
+
+.dark-mode .cta{
+    background:#172554;
+}
+
+.dark-mode .cta p{
+    color:#cbd5e1;
+}
+
+.dark-mode .insight{
+    background:#172554;
+}
+
+.dark-mode input,
+.dark-mode textarea{
+    background:#111827;
+    border-color:#374151;
+    color:white;
+}
+
+.dark-mode .btn-secondary{
+    background:transparent;
+}
+
+.dark-mode .stat{
+    border-color:#374151;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    .nav-links a{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
+    }
+
+    .hero-text h1{
+        font-size:36px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .stats{
+        margin:20px;
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:none;
+    }
+
+    .skills,
+    .projects,
+    .certifications,
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .project.featured{
+        grid-template-columns:1fr;
+    }
+
+    .project.featured img{
+        min-height:220px;
+    }
+
+    .container{
+        padding:55px 20px;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero-text h1{
+        font-size:31px;
+    }
+
+    .hero-title{
+        font-size:18px;
+    }
+
+    .hero img{
+        width:170px;
+        height:170px;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVBAR -->
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
 <nav>
-<h3>Akshata Deshpande</h3>
-<div>
+
+<div class="logo">Akshata Deshpande</div>
+
+<div class="nav-links">
+
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
 <a href="#contact">Contact</a>
-<button id="dark-toggle">🌙</button>
+
+<button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+
 </div>
+
 </nav>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
+
 <header>
+
 <div class="hero">
 
-<img src="profile.jpg">
+<div class="hero-image">
+<img src="profile.jpg" alt="Akshata Deshpande">
+</div>
 
 <div class="hero-text">
+
+<p class="hello">Hello, I'm</p>
+
 <h1>Akshata Deshpande</h1>
 
-<p>
-Aspiring Data Analyst | Turning Data into Business Insights 📊<br>
-SQL • Python • Power BI • Data-Driven Decision Making
+<p class="hero-title">
+Data Analyst | SQL • Python • Power BI
 </p>
 
-<div class="icons">
-<a href="https://www.linkedin.com/in/akshatadeshpande28/" target="_blank">
+<p class="hero-description">
+Transforming complex data into actionable business insights through
+analytics, visualization, dashboard development, and data-driven
+problem solving.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn">
+View My Projects
+</a>
+
+<a href="Akshata_Deshpande_Resume.pdf" class="btn btn-secondary" download>
+<i class="fa-solid fa-download"></i> Download Resume
+</a>
+
+</div>
+
+<div class="social-icons">
+
+<a href="https://www.linkedin.com/in/akshatadeshpande28/"
+target="_blank"
+aria-label="LinkedIn">
 <i class="fab fa-linkedin"></i>
 </a>
-<a href="https://github.com/Akshatadeshpande28" target="_blank">
+
+<a href="https://github.com/Akshatadeshpande28"
+target="_blank"
+aria-label="GitHub">
 <i class="fab fa-github"></i>
 </a>
-</div>
-
-<a href="Akshata_Deshpande_Resume.pdf" class="btn" download>
-Download Resume
-</a>
 
 </div>
+
 </div>
+
+</div>
+
 </header>
+
+
+<!-- =========================
+     QUICK STATS
+========================= -->
+
+<div class="stats">
+
+<div class="stat">
+<strong>5+</strong>
+<span>Analytics Projects</span>
+</div>
+
+<div class="stat">
+<strong>SQL</strong>
+<span>Data Analysis</span>
+</div>
+
+<div class="stat">
+<strong>Power BI</strong>
+<span>Dashboard Development</span>
+</div>
+
+<div class="stat">
+<strong>Python</strong>
+<span>Analytics & Applications</span>
+</div>
+
+</div>
+
 
 <div class="container">
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section id="about">
+
 <h2>About Me</h2>
-<p>
-Aspiring Data Analyst with hands-on experience in SQL, Python, and Power BI,
-focused on transforming raw data into actionable business insights.
 
-I have worked on projects involving customer churn analysis, revenue optimization,
-and KPI dashboards—helping identify key drivers of business performance.
-
-Passionate about solving real-world problems using data-driven decision making
-and continuously improving analytical thinking.
+<p class="section-subtitle">
+Turning data into meaningful business decisions.
 </p>
+
+<p class="about-text">
+I'm a Data Analyst with hands-on experience in SQL, Python, Power BI,
+and Excel, focused on transforming raw data into actionable business
+insights.
+
+My projects span customer churn analysis, revenue risk assessment,
+retail performance, multi-channel marketing analytics, content strategy,
+and automated data applications.
+
+I enjoy working across the analytics lifecycle—from data cleaning and
+exploratory analysis to KPI development, visualization, dashboard
+creation, and communicating insights that support better business
+decisions.
+</p>
+
 </section>
 
-<!-- SKILLS -->
+
+<!-- =========================
+     SKILLS
+========================= -->
+
 <section id="skills">
-<h2>Skills</h2>
+
+<h2>Technical Skills</h2>
+
+<p class="section-subtitle">
+Tools and technologies I use to analyze data and solve business problems.
+</p>
+
 <div class="skills">
-<div class="skill"><i class="fa-solid fa-database"></i><p>SQL</p></div>
-<div class="skill"><i class="fa-brands fa-python"></i><p>Python</p></div>
-<div class="skill"><i class="fa-solid fa-chart-column"></i><p>Power BI</p></div>
-<div class="skill"><i class="fa-solid fa-table"></i><p>Excel</p></div>
-<div class="skill"><i class="fa-solid fa-chart-line"></i><p>Data Analysis</p></div>
-<div class="skill"><i class="fa-solid fa-brain"></i><p>Machine Learning</p></div>
+
+
+<div class="skill">
+
+<i class="fa-solid fa-database"></i>
+
+<h3>SQL</h3>
+
+<p>
+Joins • CTEs • Aggregations • Window Functions •
+Stored Procedures • Query Optimization
+</p>
+
 </div>
+
+
+<div class="skill">
+
+<i class="fa-brands fa-python"></i>
+
+<h3>Python</h3>
+
+<p>
+Pandas • NumPy • Matplotlib • Seaborn •
+Data Cleaning • Exploratory Data Analysis
+</p>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<h3>Power BI</h3>
+
+<p>
+DAX • Power Query • Data Modeling •
+KPI Development • Interactive Dashboards
+</p>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-solid fa-table"></i>
+
+<h3>Excel</h3>
+
+<p>
+Pivot Tables • Advanced Functions •
+Data Cleaning • Reporting • Analysis
+</p>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Data Analytics</h3>
+
+<p>
+EDA • KPI Analysis • Customer Segmentation •
+Trend Analysis • Business Insights
+</p>
+
+</div>
+
+
+<div class="skill">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>Machine Learning</h3>
+
+<p>
+Predictive Modeling • Classification •
+Clustering • Model Evaluation • ML Fundamentals
+</p>
+
+</div>
+
+
+</div>
+
 </section>
 
-<!-- PROJECTS -->
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
 <section id="projects">
+
 <h2>Featured Projects</h2>
+
+<p class="section-subtitle">
+Turning raw data into business insights, dashboards, and analytics applications.
+</p>
+
 
 <div class="projects">
 
-<div class="project">
-<h3>Customer Churn & Revenue Risk Analysis</h3>
-<p>
-Identified 30%+ revenue at risk due to customer churn using segmentation analysis,
-highlighting the need for targeted retention strategies.
+
+<!-- DATA INSIGHTS PRO -->
+
+<div class="project featured">
+
+<img src="data-insights.png"
+alt="Data Insights Pro analytics web application"
+onerror="this.style.display='none'">
+
+<div class="project-content">
+
+<span class="project-number">
+01 • Featured Project
+</span>
+
+<h3>
+Data Insights Pro — Automated CSV Analytics Web App
+</h3>
+
+<p class="project-tools">
+Python • Flask • Pandas • Matplotlib
 </p>
-<img src="churn.png">
-<a href="https://github.com/Akshatadeshpande28">View Project →</a>
+
+<p class="project-description">
+Developed a Flask-based analytics web application that allows users
+to upload CSV datasets and automatically explore their data through
+summary statistics, column-level insights, and visualizations.
+</p>
+
+<div class="insight">
+<strong>Key Highlight:</strong>
+Transforms raw CSV files into an accessible analytics experience,
+allowing users to explore their data without writing Python code.
 </div>
 
-<div class="project">
-<h3>Maven Market Sales Analysis</h3>
-<p>
-Identified key product categories driving profitability and revenue growth,
-supporting better inventory and pricing decisions.
-</p>
-<img src="maven.png">
-<a href="https://github.com/Akshatadeshpande28">View Project →</a>
-</div>
+<a
+href="https://github.com/Akshatadeshpande28/CSV-Flask-Dashboard"
+target="_blank"
+class="project-link">
 
-<div class="project">
-<h3>D2C Multi-Channel Performance Dashboard</h3>
-<p>
-Built KPI dashboard tracking CAC, ROAS, and revenue drivers,
-helping optimize marketing performance and inventory planning.
-</p>
-<img src="D2C Dashboard.png">
-<a href="https://github.com/Akshatadeshpande28">View Project →</a>
-</div>
+<i class="fab fa-github"></i>
+View Project →
 
-<div class="project">
-<h3>Netflix Content Strategy Analysis</h3>
-<p>
-Identified high-performing genres and content patterns driving engagement,
-helping optimize content strategy decisions.
-</p>
-<img src="Netflix.png">
-<a href="https://github.com/Akshatadeshpande28">View Project →</a>
-</div>
-
-</div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-<h2>🚀 Open to Opportunities</h2>
-<p>
-Actively seeking Data Analyst / AI roles where I can apply my skills
-to solve real-world business problems using data.
-</p>
-<a href="https://www.linkedin.com/in/akshatadeshpande28/" class="btn" target="_blank">
-Let's Connect
 </a>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
-<form action="https://formspree.io/f/mgozqazo" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
-</section>
 
 </div>
+
+</div>
+
+
+<!-- CHURN -->
+
+<div class="project">
+
+<img src="churn.png"
+alt="Customer Churn Analysis Dashboard">
+
+<div class="project-content">
+
+<span class="project-number">02 • Analytics</span>
+
+<h3>
+Customer Churn & Revenue Risk Analysis
+</h3>
+
+<p class="project-tools">
+SQL • Data Analysis • Customer Segmentation
+</p>
+
+<p class="project-description">
+Analyzed customer behavior and churn patterns to identify
+high-risk customer segments and understand the potential
+business impact of customer attrition.
+</p>
+
+<div class="insight">
+
+<strong>Key Insight:</strong>
+Identified 30%+ of revenue at risk from customer churn,
+highlighting the need for targeted retention strategies.
+
+</div>
+
+<a
+href="https://github.com/Akshatadeshpande28/data-analytics-portfolio/tree/main/Churn%20Analysis"
+target="_blank"
+class="project-link">
+
+<i class="fab fa-github"></i>
+View Project →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- D2C -->
+
+<div class="project">
+
+<img src="D2C Dashboard.png"
+alt="D2C Multi Channel Performance Dashboard">
+
+<div class="project-content">
+
+<span class="project-number">03 • Business Intelligence</span>
+
+<h3>
+D2C Multi-Channel Performance Dashboard
+</h3>
+
+<p class="project-tools">
+Power BI • DAX • Data Modeling • KPI Analysis
+</p>
+
+<p class="project-description">
+Built an interactive dashboard to analyze revenue,
+marketing efficiency, channel performance, customer acquisition,
+and profitability across multiple sales channels.
+</p>
+
+<div class="insight">
+
+<strong>Business Focus:</strong>
+Tracked CAC, ROAS and revenue drivers to support
+marketing optimization and inventory planning.
+
+</div>
+
+<a
+href="https://github.com/Akshatadeshpande28/data-analytics-portfolio/tree/main/D2C-MultiChannel-Dashboard"
+target="_blank"
+class="project-link">
+
+<i class="fab fa-github"></i>
+View Project →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- MAVEN -->
+
+<div class="project">
+
+<img src="maven.png"
+alt="Maven Market Sales Dashboard">
+
+<div class="project-content">
+
+<span class="project-number">04 • Retail Analytics</span>
+
+<h3>
+Maven Market Sales Analysis
+</h3>
+
+<p class="project-tools">
+Power BI • SQL • Power Query • Data Analysis
+</p>
+
+<p class="project-description">
+Analyzed retail transaction and product performance data
+to understand sales trends, profitability, returns,
+and category-level business performance.
+</p>
+
+<div class="insight">
+
+<strong>Business Focus:</strong>
+Identified key product categories driving profitability
+and revenue growth to support better inventory and pricing decisions.
+
+</div>
+
+<a
+href="https://github.com/Akshatadeshpande28/data-analytics-portfolio/tree/main/Maven%20Analytics"
+target="_blank"
+class="project-link">
+
+<i class="fab fa-github"></i>
+View Project →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- NETFLIX -->
+
+<div class="project">
+
+<img src="Netflix.png"
+alt="Netflix Content Strategy Analysis">
+
+<div class="project-content">
+
+<span class="project-number">05 • Python Analytics</span>
+
+<h3>
+Netflix Content Strategy Analysis
+</h3>
+
+<p class="project-tools">
+Python • Pandas • Data Visualization • EDA
+</p>
+
+<p class="project-description">
+Explored Netflix content data to identify patterns across
+genres, content types, releases, and audience-focused
+content characteristics.
+</p>
+
+<div class="insight">
+
+<strong>Business Focus:</strong>
+Identified high-performing genres and content patterns
+that can support data-informed content strategy decisions.
+
+</div>
+
+<a
+href="https://github.com/Akshatadeshpande28/data-analytics-portfolio/tree/main/Netflix%20Data%20Analysis"
+target="_blank"
+class="project-link">
+
+<i class="fab fa-github"></i>
+View Project →
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+
+<section id="certifications">
+
+<h2>Certifications & Learning</h2>
+
+<p class="section-subtitle">
+Continuous learning across analytics, programming, and business intelligence.
+</p>
+
+<div class="certifications">
+
+
+<div class="cert">
+
+<h3>
+<i class="fa-solid fa-certificate"></i>
+Power BI
+</h3>
+
+<p>
+Power BI Certification — Simplilearn
+</p>
+
+</div>
+
+
+<div class="cert">
+
+<h3>
+<i class="fa-solid fa-certificate"></i>
+SQL
+</h3>
+
+<p>
+SQL Certification — Simplilearn
+</p>
+
+</div>
+
+
+<div class="cert">
+
+<h3>
+<i class="fa-solid fa-code"></i>
+CS50x
+</h3>
+
+<p>
+Introduction to Computer Science — Harvard
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     OPPORTUNITIES
+========================= -->
+
+<section class="cta">
+
+<h2>🚀 Open to Data Analytics Opportunities</h2>
+
+<p>
+I'm actively seeking Data Analyst, Business Analytics, and
+Business Intelligence opportunities where I can apply SQL,
+Python, Power BI, and analytical problem-solving to support
+data-driven business decisions.
+</p>
+
+<a
+href="https://www.linkedin.com/in/akshatadeshpande28/"
+class="btn"
+target="_blank">
+
+<i class="fab fa-linkedin"></i>
+Let's Connect
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<h2>Let's Connect</h2>
+
+<p class="section-subtitle">
+Interested in discussing a role, project, or analytics opportunity? I'd be happy to connect.
+</p>
+
+
+<div class="contact-wrapper">
+
+
+<div class="contact-info">
+
+<h3>Get in Touch</h3>
+
+<p>
+You can reach me through LinkedIn, GitHub, or the contact
+form. I'm open to conversations around data analytics,
+business intelligence, and data-driven problem solving.
+</p>
+
+<div class="contact-links">
+
+<a
+href="https://www.linkedin.com/in/akshatadeshpande28/"
+target="_blank">
+
+<i class="fab fa-linkedin"></i>
+LinkedIn
+
+</a>
+
+
+<a
+href="https://github.com/Akshatadeshpande28"
+target="_blank">
+
+<i class="fab fa-github"></i>
+GitHub
+
+</a>
+
+</div>
+
+</div>
+
+
+<form
+action="https://formspree.io/f/mgozqazo"
+method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required>
+
+<textarea
+name="message"
+rows="5"
+placeholder="Your Message"
+required></textarea>
+
+<button type="submit">
+<i class="fa-solid fa-paper-plane"></i>
+Send Message
+</button>
+
+</form>
+
+
+</div>
+
+</section>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-© 2026 Akshata Deshpande | Data Analytics Portfolio
+
+© 2026 Akshata Deshpande |
+Data Analytics Portfolio
+
 </footer>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
+
 const toggle = document.getElementById("dark-toggle");
+
 toggle.addEventListener("click", () => {
-document.body.classList.toggle("dark-mode");
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        toggle.textContent = "☀️";
+        localStorage.setItem("theme","dark");
+    }
+    else{
+        toggle.textContent = "🌙";
+        localStorage.setItem("theme","light");
+    }
+
 });
+
+
+if(localStorage.getItem("theme") === "dark"){
+
+    document.body.classList.add("dark-mode");
+    toggle.textContent = "☀️";
+
+}
+
 </script>
+
 
 </body>
 </html>
+```
